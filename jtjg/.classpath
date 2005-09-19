@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/systray4j.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/commons-net-1.2.2.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/dom4j.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/forms-1.0.4.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/JCalendarModified.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="D:/Anwendungen/eclipse/workspace/JtJG/lib/looks-1.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/systray4j.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/commons-net-1.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/forms-1.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/JCalendarModified.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="E:/Anwendungen/eclipse/workspace/jtjg/lib/looks-1.2.2.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

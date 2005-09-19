@@ -312,7 +312,7 @@ public class GuiTabAbout extends JPanel {
 		    linkHomePage.setBackground(background);
 		    linkHomePage.setContentType("text/html");
 		    linkHomePage.setEditable(false);
-		    linkHomePage.setText("<html><a href=\"http://www.jackthegrabber.de\">XMediaGrabber</a></html>");			
+		    linkHomePage.setText("<html><a href=\"http://www.jackthegrabber.de\">Jack the JGrabber</a></html>");			
 		    linkHomePage.addHyperlinkListener(hyperlinkAdapter);
 		}
 		return linkHomePage;
@@ -323,7 +323,7 @@ public class GuiTabAbout extends JPanel {
 	 */
 	public JLabel getLabelJgrabber() {
 		if (labelJGrabber == null) {
-			labelJGrabber = new JLabel("XMediaGrabber is free software, and is released under the");
+			labelJGrabber = new JLabel("Jack the JGrabber is free software, and is released under the");
 			labelJGrabber.setName("www.jackthegrabber.de");
 		}
 		return labelJGrabber;

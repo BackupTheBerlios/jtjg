@@ -71,14 +71,14 @@ public class ControlMain {
 	static BOBox activeBox;
 
 	private static Properties properties = new Properties();
-	public static String xmgDirectory = System.getProperty("user.home")+File.separator+".xmg";
+	public static String jtjgDirectory = System.getProperty("user.home")+File.separator+".jtjg";
 	private static Locale locale = new Locale("");
 	public static GuiSplashScreen splash = null;
 	public static GuiLogWindow logWindow;
 
 	private static String settingsFilename;
 
-	public static String version[] = {"XMediaGrabber 0.2.9c", "06.02.2005", "User: " + System.getProperty("user.name")};
+	public static String version[] = {"Jack the JGrabber 0.2.9c", "06.02.2005", "User: " + System.getProperty("user.name")};
 
 	public static void main(String args[]) {
 	    startSplash();
@@ -405,11 +405,11 @@ public class ControlMain {
      */
     public static String getSettingsFilename() {
         if (settingsFilename==null) {
-            File userHome = new File(xmgDirectory);
+            File userHome = new File(jtjgDirectory);
             if (!userHome.exists()) {
                 userHome.mkdir();
             }
-            settingsFilename = xmgDirectory+File.separator+"settings.xml";    
+            settingsFilename = jtjgDirectory+File.separator+"settings.xml";    
         }
         return settingsFilename;
     }
