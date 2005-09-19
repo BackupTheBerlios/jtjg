@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="JGrabber" default="zipProject" basedir=".">
+
+	 <!-- property Zuweisung -->
+	
+	<property name="targetJarName" 		value="XMediaGrabber.jar" />
+	<property name="zipFileName" 		value="XMediaGrabber.zip" />
+	<property name="targetDir" 			value="c:\xmg" />
+	<property name="mainclass" 			value="XMediaGrabber.ControlMain" />
+	<property name="classpath1" 		value="./lib/dom4j.jar" />
+	<property name="classpath2" 		value="./lib/log4j-1.2.8.jar" />
+	<property name="classpath3" 		value="./lib/forms-1.0.4.jar" />
+	<property name="classpath4" 		value="./lib/JCalendarModified.jar" />
+	<property name="classpath5" 		value="./lib/commons-net-1.2.2.jar" />
+	<property name="classpath6" 		value="./lib/looks-1.2.2.jar" />
+	<property name="classpath7" 		value="./lib/systray4j.jar" />
+	<property name="sourcedir1" 		value="**\*.class" />
+	<property name="resourcedir1" 		value="ico\*.*" />
+	<property name="resourcedir2" 		value="locale\*.*" />
+	
+	 <!-- Aufräumen der alten Files -->
+	<target name="cleanup">
+		<delete file="${targetDir}/${targetJarName}"/>
+		<delete file="${targetDir}/${zipFileName}"/>
+	</target>
+	
+	 <!-- Erstellung des Jars aus den eigenen Sourcen -->
+	<target depends="cleanup" name="buildjar">
+		<jar destfile="${targetDir}/${targetJarName}">
+			<fileset dir="">
+				<include name="${sourcedir1}"/>
+				<include name="${resourcedir1}"/>
+				<include name="${resourcedir2}"/>
+				<include name="Authors"/>
+				<include name="themepack.zip"/>
+				<exclude name="**\*.java"/>
+				<exclude name="**\*.ini"/>
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="control.ControlMain"/>
+				<attribute name="Class-Path" value="${classpath1} ${classpath2} ${classpath3} ${classpath4} ${classpath5} ${classpath6} ${classpath7}"/>
+	       	</manifest>
+		</jar>
+	</target>
+	
+	<!-- Kopieren der Nötigen Dateien -->
+	<target depends="buildjar" name="copyLibs">
+		<copy todir="${targetDir}/lib">
+			<fileset dir="lib"/>
+		</copy>	
+		<copy file="COPYING" todir="${targetDir}"/>
+		<copy file="README" todir="${targetDir}"/>
+		<copy file="systray4j.dll" todir="${targetDir}"/>
+		<copy file="libsystray4j.so" todir="${targetDir}"/>
+		<copy file="start.sh" todir="${targetDir}"/>
+		<copy file="udrec.exe" todir="${targetDir}"/>
+		<copy file="jackTheJGrabber.ico" todir="${targetDir}"/>
+		<copy file="jackTheJGrabber.png" todir="${targetDir}"/>
+	</target>
+	
+	<!-- Zippen des Projekts -->
+	<target depends="copyLibs" name="zipProject">
+		 <zip destfile="${targetDir}/${zipFileName}"
+				basedir="${targetDir}"
+				excludes="**/settings.xml, X.ini, jackLog.*, xmgLog.*"
+				update="true"
+		  />
+	</target>
+</project>

@@ -1,0 +1,55 @@
+ReadMe zu JtJG 0.2.1, Stand 17.12.2004
+
+1.Voraussetzungen
+2.diverse Einstellungen
+
+
+1.Voraussetzungen
+
+Um JtJG nutzen zu können, ist eine installierte JRE ab Version 1.4.0 erforderlich
+Die aktuelle Version kann unter http://java.sun.com/ herunter geladen weden.
+Mit java -version ermittelt man die installierta Java-Version.
+Die aktuelle Version ist 5.0 aka Tiger.
+
+
+2.1 Eintragen der Box-IP und weitere Einstellungen:
+
+Reiter 'Einstellungen --> Allgemein'
+Anlegen eines Box-IP Eintrags über den Button 'Anlegen'.
+Diesen Eintrag durch Klick darauf editieren und die eigene Box-IP eintragen.
+
+Die anderen Einstellungen auf dieser Seite nach eigenem Geschmack vornehmen.
+
+Zur Nutzung des Systemtray-Icons unter Linux ist die Datei 'libsystray4j.so'
+(befindet sich im Jack-Verzeichnis) ins JAVA-Home Lib-Verzeichnis zu kopieren.
+Genauere Auskunft über den Zielpfad gibt der Button 'Hilfe' in dem kleinen Fenster,
+welches bei aktiviertem SystemTray-Icon zusammen mit Jack erscheint.
+
+
+2.2 Aufnahmeeinstellungen
+
+Reiter 'Einstellungen --> Aufnahme'
+Auswahl des Aufnahme-Verzeichnisses über den Browse-Button.
+Einige Einstellungen sind selbsterklärend und nach belieben zu setzen.
+
+2.2.1
+Nutzung von udrec unter Linux
+Um udrec nutzen zu können, muss mono installiert sein.
+Mono ist bei den grösseren Linux-Distributionenen dabei,
+sonst unter http://www.mono-project.com herunterladen und installieren.
+
+Unter 'Pfad zur udrec.exe' sinngemäss Folgendes eintragen:
+mono /Pfad/zu/udrec.exe
+Die Datei udrec.exe wird mit dem Programm ausgeliefert!!
+
+Desweiteren können udrec-Optionen gesetzt werden (z.B. -vsplit oder -asplit).
+Unabhängig von der ausgewählten Engine kann noch das Aufnahmeformat gewählt werden (TS, PES und bei udrec noch ES).
+
+2.3 Wiedergabeeinstellungen
+
+Reiter 'Einstellungen --> Wiedergabe'
+Dieser Eintrag kann aus dem angegebenen Beispiel übernommen werden.
+Wer einen anderen Player verwenden möchte,
+ersetzt einfach den Aufruf (im Beispiel 'xine' durch z.B. 'mplayer')
+
+Mit diesen Einstellungen ist JtJG einsatzbereit.
