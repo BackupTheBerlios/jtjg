@@ -3,9 +3,9 @@
 
 	 <!-- property Zuweisung -->
 	
-	<property name="targetJarName" 		value="XMediaGrabber.jar" />
-	<property name="zipFileName" 		value="XMediaGrabber.zip" />
-	<property name="targetDir" 			value="c:\xmg" />
+	<property name="targetJarName" 		value="JtJGrabber.jar" />
+	<property name="zipFileName" 		value="JtJGrabber.zip" />
+	<property name="targetDir" 			value="c:\jtjg" />
 	<property name="mainclass" 			value="XMediaGrabber.ControlMain" />
 	<property name="classpath1" 		value="./lib/dom4j.jar" />
 	<property name="classpath2" 		value="./lib/log4j-1.2.8.jar" />
