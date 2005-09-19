@@ -34,7 +34,7 @@ public class SerNewsHandler extends Thread {
 		try {        
 	        String htmlText = SerWebsiteContentLoader.getWebsiteContent(
 					"http://www.jackthegrabber.de", 80,
-					"/xmediagrabber/news.htm");
+					"/jtjg/news.htm");
 		        
 			int pos = htmlText.toLowerCase().indexOf("<html>");
 			if (pos != -1) {

@@ -78,7 +78,7 @@ public class ControlMain {
 
 	private static String settingsFilename;
 
-	public static String version[] = {"Jack the JGrabber 0.2.9c", "06.02.2005", "User: " + System.getProperty("user.name")};
+	public static String version[] = {"Jack the JGrabber 0.2.9c", "19.09.2005", "User: " + System.getProperty("user.name")};
 
 	public static void main(String args[]) {
 	    startSplash();
