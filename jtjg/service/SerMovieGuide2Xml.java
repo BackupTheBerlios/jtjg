@@ -30,16 +30,14 @@ import javax.swing.JProgressBar;
 
 import model.BOSettingsProxy;
 
+import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
-
 import presentation.GuiMainView;
 import service.XML.SerXMLHandling;
-
 import control.ControlMain;
 import control.ControlMovieGuideTab;
-import org.apache.log4j.Logger;
 
 public class SerMovieGuide2Xml extends Thread{
     ArrayList htToken = new ArrayList(5);
@@ -124,10 +122,10 @@ public class SerMovieGuide2Xml extends Thread{
     	
 	    URL url = null;
 	    if(!ControlMovieGuideTab.movieGuideFile.exists()){
-	    url = new URL("http://www.premiere.de/content/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(0,"MM_yy")+".txt");
+	    url = new URL("http://www.premiere.de/premweb/redaktion/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(0,"MM_yy")+".txt");
 	    xml = 0;
 	    }else{
-	        url = new URL("http://www.premiere.de/content/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(1,"MM_yy")+".txt");     
+	        url = new URL("http://www.premiere.de/premweb/redaktion/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(1,"MM_yy")+".txt");     
 	        xml = 1;
 	    }    
 	    if(ControlMain.getSettingsMovieGuide().isMgStoreOriginal()){                                    
@@ -205,7 +203,7 @@ public class SerMovieGuide2Xml extends Thread{
             System.getProperties().put("proxyPort", proxySettings.getPort());
         }
 	    URLConnection con;   
-	    URL url = new URL("http://www.premiere.de/content/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(1,"MM_yy")+".txt");        
+	    URL url = new URL("http://www.premiere.de/premweb/redaktion/download/mguide_d_s_"+ SerFormatter.getAktuellDateString(1,"MM_yy")+".txt");        
 		con =url.openConnection();
 		if (proxySettings.isUse()) {
             con.setRequestProperty("Proxy-Authorization",
