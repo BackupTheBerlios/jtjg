@@ -23,7 +23,9 @@ Connection Settings, welche IP darf connecten etc
 --------------------------------------------------------
 Noch zu klären
 --------------------------------------------------------
-Aufname über den vlc ! Programm schauen erfolgt sinnigerweise über den vlc clientseitig, wenn die Aufnahme auch über den client vlc erfolgen soll, müsste das Aufnahmeverzeichniss serverseitig freigegeben werden --> von Fremdrechnern nicht realisierbar
+Aufname über den vlc ! Programm schauen erfolgt sinnigerweise über den vlc clientseitig, 
+wenn die Aufnahme auch über den client vlc erfolgen soll, müsste das Aufnahmeverzeichniss 
+serverseitig freigegeben werden --> von Fremdrechnern nicht realisierbar
 vlc müsste auch serverseitig installiert werden-->DAU Alarm :)
 
 
