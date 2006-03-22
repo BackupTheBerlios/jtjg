@@ -36,7 +36,7 @@ import model.BORecordArgs;
 public class TcpRecord extends Record{
     Socket socket;
     int port = 31338;
-    byte[] buffer = new byte[0];
+    byte[] buffer = null;
     String boxIp;
     String aPid;
     boolean running = true;
