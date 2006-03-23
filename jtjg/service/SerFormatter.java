@@ -104,7 +104,7 @@ public class SerFormatter {
 		return sdf.format(new Date(timeInMillis));
 	}
 
-	private static String out(int i) {
+	public static String out(int i) {
 		return (i >= 10) ? Integer.toString(i) : "0" + i;
 	}
 

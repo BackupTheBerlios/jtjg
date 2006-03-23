@@ -34,6 +34,8 @@ import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
+
 import presentation.GuiMainView;
 import service.XML.SerXMLHandling;
 import control.ControlMain;
@@ -65,6 +67,16 @@ public class SerMovieGuide2Xml extends Thread{
         htToken.add("Darsteller:");
     }
     
+    public static String getLengthInMinutes(String input){
+    	int check = 0;
+    	try{
+    		check = Integer.parseInt(input);
+    	}catch (ParseException e) {
+    			e.printStackTrace();
+		}
+		return "0"+check/60+":"+SerFormatter.out((check-((check/60)*60)));
+    }
+    
     private void createElement(String input) {
         try {        	                    	
             switch ((htToken.indexOf(input.substring(0, input.indexOf(":")+1)))) {               
@@ -72,10 +84,12 @@ public class SerMovieGuide2Xml extends Thread{
                 SerXMLHandling.setElementInElement(movie,"titel", input.substring(input.indexOf(":") + 2));                
                     break;
                 case 1:
-                SerXMLHandling.setElementInElement(movie,"episode",input.substring(9, input.indexOf("Genre:") - 2));
-                SerXMLHandling.setElementInElement(movie,"genre", input.substring(input.indexOf("Genre:") + 7, input.indexOf("Länge:") - 2));
-                SerXMLHandling.setElementInElement(movie,"dauer", input.substring(input.indexOf("Länge:") + 7, input.indexOf("Stunden") - 1));
-                    break;
+                	
+                SerXMLHandling.setElementInElement(movie,"episode",input.substring(9, input.indexOf("Genre:") - 2));                
+                SerXMLHandling.setElementInElement(movie,"genre", input.substring(input.indexOf("Genre:") + 7, input.indexOf("Länge:") - 2));                
+                
+                SerXMLHandling.setElementInElement(movie,"dauer", getLengthInMinutes(input.substring(input.indexOf("Länge:") + 7, input.indexOf("Minuten") - 1)));                
+                break;
                 case 2:
                 SerXMLHandling.setElementInElement(movie,"land",input.substring(input.indexOf(":") + 2, input.indexOf("Produktionsjahr:") - 2));
                 SerXMLHandling.setElementInElement(movie,"jahr", input.substring(input.indexOf("Produktionsjahr:") + 17, input.indexOf("Regie:") - 2));
@@ -144,8 +158,8 @@ public class SerMovieGuide2Xml extends Thread{
         try {        
         URLConnection con = this.getConnection();        
         int fileLength = con.getContentLength();
-            bar.setMaximum(fileLength);
-            BufferedReader in = new BufferedReader( new InputStreamReader(con.getInputStream(),"ISO8859-1"));                        
+            bar.setMaximum(fileLength);                                   
+            BufferedReader in = new BufferedReader( new InputStreamReader(con.getInputStream(),"UTF8"));
             String input = new String();
             StringBuffer inhalt = new StringBuffer();
             boolean[] lineCounter = new boolean[2];
