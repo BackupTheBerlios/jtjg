@@ -20,7 +20,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 import javax.swing.DefaultComboBoxModel;
 
-import control.ControlSettingsTabMain;
+import control.settings.ControlSettingsTabMain;
 
 /**
  * ComboBoxModel der JCombobox Stream-Typ

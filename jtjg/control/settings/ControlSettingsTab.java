@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTab.java by Geist Alexander 
 
@@ -17,6 +17,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  
 
 */ 
+import control.ControlTab;
 import model.BOSettings;
 import presentation.GuiMainView;
 import presentation.settings.GuiSettingsTab;

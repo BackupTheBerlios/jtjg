@@ -1,4 +1,4 @@
-package boxConnection;
+package boxConnection.control;
 /*
 SerBoxControlDefault.java by Geist Alexander 
 
@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
+
 import model.BOBouquet;
 import model.BOEpg;
 import model.BOEpgDetails;
@@ -33,7 +34,7 @@ import presentation.timer.GuiNeutrinoRecordTimerTableModel;
 import presentation.timer.GuiNeutrinoSystemTimerTableModel;
 import presentation.timer.GuiRecordTimerTableModel;
 import presentation.timer.GuiSystemTimerTableModel;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 /**
  * Default-Schnittstellen-Definition

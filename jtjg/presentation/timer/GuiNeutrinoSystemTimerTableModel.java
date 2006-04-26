@@ -14,7 +14,7 @@ package presentation.timer;
  */
 import model.BOTimer;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public class GuiNeutrinoSystemTimerTableModel extends GuiSystemTimerTableModel {
 

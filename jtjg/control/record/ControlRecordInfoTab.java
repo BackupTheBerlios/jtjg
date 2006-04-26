@@ -1,4 +1,4 @@
-package control;
+package control.record;
 /*
 
  This program is free software; you can redistribute it and/or modify
@@ -33,6 +33,9 @@ import javax.swing.event.*;
 import model.*;
 
 import org.apache.log4j.*;
+
+import control.ControlMain;
+import control.ControlTab;
 
 import presentation.*;
 import presentation.recordInfo.*;

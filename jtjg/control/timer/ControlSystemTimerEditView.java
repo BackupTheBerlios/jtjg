@@ -1,4 +1,4 @@
-package control;
+package control.timer;
 /*
  * GuiSettingsTabRecord.java by Geist Alexander
  * 
@@ -16,6 +16,8 @@ import java.awt.event.*;
 import java.util.*;
 
 import javax.swing.*;
+
+import control.ControlMain;
 
 import model.*;
 import presentation.timer.*;

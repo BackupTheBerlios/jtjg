@@ -20,7 +20,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 import javax.swing.table.AbstractTableModel;
 
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public abstract class GuiSystemTimerTableModel extends AbstractTableModel
 {

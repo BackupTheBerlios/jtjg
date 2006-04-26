@@ -35,8 +35,8 @@ import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
-import control.ControlAboutTab;
 import control.ControlMain;
+import control.about.ControlAboutTab;
 
 public class GuiTabAbout extends JPanel {
 

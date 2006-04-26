@@ -42,7 +42,7 @@ import org.apache.log4j.Logger;
 import com.jgoodies.plaf.plastic.Plastic3DLookAndFeel;
 
 import control.ControlMain;
-import control.ControlSettingsTabMovieGuide;
+import control.settings.ControlSettingsTabMovieGuide;
 
 public class SerSettingsHandler {
 

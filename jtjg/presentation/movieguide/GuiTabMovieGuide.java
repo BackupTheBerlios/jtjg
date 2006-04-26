@@ -50,7 +50,6 @@ import control.ControlMain;
 import control.ControlMovieGuideTab;
 
 public class GuiTabMovieGuide extends JPanel {
-
 	private ControlMovieGuideTab control;	
 	
 	private JButton jButtonNeuEinlesen= null;

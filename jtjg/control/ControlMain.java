@@ -53,10 +53,10 @@ import service.SerLogAppender;
 import service.SerSettingsHandler;
 import streaming.LocalTimerRecordDaemon;
 import streaming.RecordControl;
-import boxConnection.SerBoxControl;
-import boxConnection.SerBoxControlDefault;
 import boxConnection.SerBoxGuiDetector;
 import boxConnection.SerStreamingServer;
+import boxConnection.control.SerBoxControl;
+import boxConnection.control.SerBoxControlDefault;
 
 /**
  * Startklasse, Start der Anwendung Deklaration der globalen Variablen
@@ -166,10 +166,8 @@ public class ControlMain {
 
 	public static void startLogger() {
 		PatternLayout layout = new PatternLayout();
-
 		//http://logging.apache.org/log4j/docs/api/org/apache/log4j/PatternLayout.html
 		layout.setConversionPattern("%d{HH:mm:ss:ms} %-5p %c - %m%n");
-
 		try {
 			SerLogAppender logAppender = new SerLogAppender(layout);
 			logAppender.setMaxBackupIndex(3); //Number of max Backup-Files

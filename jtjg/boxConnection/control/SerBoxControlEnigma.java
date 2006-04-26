@@ -2,7 +2,7 @@
  * Created on 08.08.2004
  *
  */
-package boxConnection;
+package boxConnection.control;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,13 +23,14 @@ import model.BOTimerList;
 
 import org.apache.log4j.Logger;
 
+
 import presentation.timer.GuiEnigmaRecordTimerTableModel;
 import presentation.timer.GuiEnigmaSystemTimerTableModel;
 import presentation.timer.GuiRecordTimerTableModel;
 import presentation.timer.GuiSystemTimerTableModel;
 import service.SerFormatter;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 /*
 SerBoxControlEnigma.java by Geist Alexander, Treito

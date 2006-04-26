@@ -30,7 +30,7 @@ import javax.swing.event.AncestorListener;
 import model.BORecordInfos;
 import presentation.GuiTab;
 import presentation.GuiTableSorter;
-import control.ControlRecordInfoTab;
+import control.record.ControlRecordInfoTab;
 
 public class GuiTabRecordInfoOverview extends GuiTab {
 

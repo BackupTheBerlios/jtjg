@@ -37,7 +37,7 @@ import model.BOFileWrapper;
 import presentation.GuiTab;
 import presentation.GuiTableSorter;
 import control.ControlMain;
-import control.ControlRecordEditTab;
+import control.record.ControlRecordEditTab;
 
 public class GuiTabRecordEdit extends GuiTab {
 

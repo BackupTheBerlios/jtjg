@@ -49,6 +49,8 @@ import model.BOTimer;
 
 import org.apache.log4j.Logger;
 
+import control.notice.ControlNoticeBroadcastView;
+
 import presentation.GuiAudioPidOptionsDialog;
 import presentation.GuiMainView;
 import presentation.GuiQuickRecordOptionsDialog;
@@ -61,8 +63,8 @@ import service.SerFormatter;
 import service.SerNoticeListHandler;
 import service.SerTimerHandler;
 import streaming.RecordControl;
-import boxConnection.SerBoxControl;
 import boxConnection.SerStreamingServer;
+import boxConnection.control.SerBoxControl;
 
 /**
  * Controlklasse des Programmtabs.

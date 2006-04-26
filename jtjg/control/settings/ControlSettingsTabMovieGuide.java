@@ -16,7 +16,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  
 
 */ 
-package control;
+package control.settings;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -31,6 +31,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
+import control.ControlMain;
 
 import model.BOSettingsMovieGuide;
 import presentation.GuiMainView;

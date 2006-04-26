@@ -1,4 +1,4 @@
-package control;
+package control.record;
 /*
 
  This program is free software; you can redistribute it and/or modify
@@ -60,6 +60,10 @@ import model.BOFileWrapper;
 import model.BOPlaybackOption;
 
 import org.apache.log4j.Logger;
+
+import control.ControlMain;
+import control.ControlTab;
+import control.muxxer.ControlMuxxerView;
 
 import presentation.GuiMainView;
 import presentation.recordInfo.BaseTreeNode;

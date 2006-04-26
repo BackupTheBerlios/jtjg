@@ -36,8 +36,8 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlTimerEditView;
-import control.ControlTimerTab;
+import control.timer.ControlTimerEditView;
+import control.timer.ControlTimerTab;
 
 public class GuiTimerEditView extends JDialog {
 

@@ -37,8 +37,8 @@ import service.SerHelper;
 import service.SerProcessStopListener;
 import service.SerTimerHandler;
 import control.ControlMain;
-import control.ControlMuxxerView;
 import control.ControlProgramTab;
+import control.muxxer.ControlMuxxerView;
 
 public class RecordControl extends Thread implements SerProcessStopListener {
 	Record record;

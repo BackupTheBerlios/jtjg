@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.net.Authenticator;
 import java.net.URL;
 
+import boxConnection.control.SerBoxControlEnigma;
+import boxConnection.control.SerBoxControlNeutrino;
+
 import control.ControlMain;
 
 public class SerBoxGuiDetector extends Thread {

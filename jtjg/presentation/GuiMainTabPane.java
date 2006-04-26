@@ -24,19 +24,15 @@ import presentation.about.GuiTabAbout;
 import presentation.movieguide.GuiTabMovieGuide;
 import presentation.program.GuiTabProgramm;
 import presentation.recordInfo.*;
-import presentation.recordInfo.GuiTabRecordInfo;
 import presentation.settings.GuiTabSettings;
 import presentation.start.GuiTabStart;
 import presentation.timer.GuiBoxTimerPanel;
 import control.*;
-import control.ControlAboutTab;
-import control.ControlMain;
-import control.ControlMovieGuideTab;
-import control.ControlProgramTab;
-import control.ControlRecordInfoTab;
-import control.ControlSettingsTab;
-import control.ControlStartTab;
-import control.ControlTimerTab;
+import control.about.ControlAboutTab;
+import control.record.ControlRecordEditTab;
+import control.record.ControlRecordInfoTab;
+import control.settings.ControlSettingsTab;
+import control.timer.ControlTimerTab;
 
 public class GuiMainTabPane extends JTabbedPane {
 

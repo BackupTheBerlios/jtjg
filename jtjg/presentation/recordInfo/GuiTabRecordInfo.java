@@ -35,6 +35,7 @@ import com.jgoodies.forms.builder.*;
 import com.jgoodies.forms.layout.*;
 
 import control.*;
+import control.record.ControlRecordInfoTab;
 
 public class GuiTabRecordInfo extends GuiTab {
 

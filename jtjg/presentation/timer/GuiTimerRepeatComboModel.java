@@ -19,7 +19,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 import javax.swing.DefaultComboBoxModel;
 
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public class GuiTimerRepeatComboModel extends DefaultComboBoxModel { //implements ComboBoxModel {
 	

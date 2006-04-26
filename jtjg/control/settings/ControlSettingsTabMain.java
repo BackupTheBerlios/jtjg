@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTabMain.java by Alexander Geist
 
@@ -49,6 +49,9 @@ import service.SerExternalProcessHandler;
 import com.jgoodies.plaf.plastic.Plastic3DLookAndFeel;
 import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
 import com.jgoodies.plaf.plastic.PlasticXPLookAndFeel;
+
+import control.ControlMain;
+import control.ControlMainView;
 
 public class ControlSettingsTabMain extends ControlTabSettings implements KeyListener, ActionListener, ItemListener {
 

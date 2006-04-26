@@ -43,7 +43,7 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlMuxxerView;
+import control.muxxer.ControlMuxxerView;
 
 
 public class GuiMuxxerView extends JDialog{

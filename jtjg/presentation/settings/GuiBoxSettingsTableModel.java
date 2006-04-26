@@ -25,7 +25,7 @@ import javax.swing.table.AbstractTableModel;
 import model.BOBox;
 import service.SerAlertDialog;
 import control.ControlMain;
-import control.ControlSettingsTabMain;
+import control.settings.ControlSettingsTabMain;
 
 public class GuiBoxSettingsTableModel extends AbstractTableModel  {
 	

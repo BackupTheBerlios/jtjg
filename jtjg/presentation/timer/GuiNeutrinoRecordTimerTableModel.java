@@ -20,7 +20,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 import model.BOTimer;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public class GuiNeutrinoRecordTimerTableModel extends GuiRecordTimerTableModel
 {

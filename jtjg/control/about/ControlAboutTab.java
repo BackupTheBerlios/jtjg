@@ -1,4 +1,4 @@
-package control;
+package control.about;
 /*
 ControlAboutTab.java by Geist Alexander 
 
@@ -23,6 +23,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
+
+import control.ControlMain;
+import control.ControlTab;
 
 import presentation.GuiMainView;
 

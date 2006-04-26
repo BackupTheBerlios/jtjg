@@ -44,7 +44,7 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlNoticeBroadcastView;
+import control.notice.ControlNoticeBroadcastView;
 
 
 public class GuiNoticeBroadcastView extends JDialog {

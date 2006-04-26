@@ -1,4 +1,4 @@
-package control;
+package control.muxxer;
 /*
 ControlMuxxerView.java by Geist Alexander 
 
@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JCheckBox;
+
+import control.ControlMain;
 
 import model.BOAfterRecordOptions;
 import model.BOExternalProcess;

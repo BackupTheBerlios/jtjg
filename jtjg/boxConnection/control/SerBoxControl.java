@@ -1,4 +1,4 @@
-package boxConnection;
+package boxConnection.control;
 /*
 SerBoxControl.java by Alexander Geist
 
@@ -36,7 +36,7 @@ import presentation.timer.GuiRecordTimerTableModel;
 import presentation.timer.GuiSystemTimerTableModel;
 import service.SerTimerHandler;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public abstract class SerBoxControl {
     

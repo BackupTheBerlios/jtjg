@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTabProxy.java by Geist Alexander 
 
@@ -26,6 +26,8 @@ import java.awt.event.KeyListener;
 import javax.swing.JCheckBox;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import control.ControlMain;
 
 import model.BOSettingsProxy;
 import presentation.GuiMainView;

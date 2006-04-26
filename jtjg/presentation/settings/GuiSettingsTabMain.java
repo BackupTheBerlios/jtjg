@@ -43,8 +43,8 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlSettingsTabMain;
-import control.ControlTabSettings;
+import control.settings.ControlSettingsTabMain;
+import control.settings.ControlTabSettings;
 
 public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 

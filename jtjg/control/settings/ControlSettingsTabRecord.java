@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTabRecord.java by Geist Alexander 
 
@@ -38,6 +38,9 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+
+import control.ControlMain;
+import control.muxxer.ControlMuxxerView;
 
 import model.BOPatternTag;
 import model.BORecordArgs;

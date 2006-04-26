@@ -42,7 +42,7 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public class GuiBoxTimerPanel extends JPanel {
 	

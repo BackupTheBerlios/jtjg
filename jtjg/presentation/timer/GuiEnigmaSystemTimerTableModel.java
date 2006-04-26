@@ -22,7 +22,7 @@ import java.util.GregorianCalendar;
 import model.BOTimer;
 import service.SerFormatter;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 
 public class GuiEnigmaSystemTimerTableModel extends GuiSystemTimerTableModel 

@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTabPath.java by Geist Alexander 
 
@@ -28,6 +28,8 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileFilter;
+
+import control.ControlMain;
 
 import model.BOSettingsPath;
 import presentation.settings.GuiSettingsTabPath;

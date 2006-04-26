@@ -4,7 +4,7 @@ package presentation.timer;
 
 import model.BOTimer;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 /*
 GuiEnigmaRecordTimerTableModel.java by Geist Alexander, Treito

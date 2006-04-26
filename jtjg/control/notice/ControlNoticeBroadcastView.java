@@ -1,4 +1,4 @@
-package control;
+package control.notice;
 /*
 ControlNoticeBroadcastView.java by Geist Alexander 
 
@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import control.ControlMain;
 
 import model.BONoticeBroadcast;
 import model.BOSender;

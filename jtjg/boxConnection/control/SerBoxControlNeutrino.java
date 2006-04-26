@@ -1,4 +1,4 @@
-package boxConnection;
+package boxConnection.control;
 /*
 SerBoxControlNeutrino.java by Geist Alexander 
 
@@ -37,13 +37,14 @@ import model.BOTimerList;
 
 import org.apache.log4j.Logger;
 
+
 import presentation.timer.GuiNeutrinoRecordTimerTableModel;
 import presentation.timer.GuiNeutrinoSystemTimerTableModel;
 import presentation.timer.GuiRecordTimerTableModel;
 import presentation.timer.GuiSystemTimerTableModel;
 import service.SerFormatter;
 import control.ControlMain;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 /**
  * Schnittstelle zum NeutrinoImage

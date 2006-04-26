@@ -22,7 +22,7 @@ import javax.swing.table.AbstractTableModel;
 
 import model.BONoticeBroadcast;
 import control.ControlMain;
-import control.ControlNoticeBroadcastView;
+import control.notice.ControlNoticeBroadcastView;
 
 public class GuiNoticeTableModel extends AbstractTableModel  {
 	

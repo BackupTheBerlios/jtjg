@@ -1,4 +1,4 @@
-package control;
+package control.settings;
 /*
 ControlSettingsTabPlayback.java by Geist Alexander 
 
@@ -25,6 +25,8 @@ import java.awt.event.ItemListener;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
+
+import control.ControlMain;
 
 import model.BOPlaybackOption;
 import model.BOSettingsPlayback;

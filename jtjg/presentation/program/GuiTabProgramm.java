@@ -554,7 +554,7 @@ public class GuiTabProgramm extends GuiTab {
 	 */
 	public JDateChooser getJDateChooser() {
 		if (jDateChooser == null) {
-			jDateChooser = new JDateChooser("d MMMMM, yyyy", false, control);
+			jDateChooser = new JDateChooser("d MMMMM, yyyy", false,control);
 		}
 		return jDateChooser;
 	}

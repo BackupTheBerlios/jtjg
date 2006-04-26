@@ -19,7 +19,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */ 
 import javax.swing.Icon;
 
-import control.ControlTabSettings;
+import control.settings.ControlTabSettings;
 
 
 public interface GuiSettingsTab {

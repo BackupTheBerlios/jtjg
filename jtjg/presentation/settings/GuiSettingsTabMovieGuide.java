@@ -36,8 +36,8 @@ import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
 
-import control.ControlSettingsTabMovieGuide;
-import control.ControlTabSettings;
+import control.settings.ControlSettingsTabMovieGuide;
+import control.settings.ControlTabSettings;
 
 public class GuiSettingsTabMovieGuide extends JPanel implements GuiSettingsTab {
 

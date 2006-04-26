@@ -33,13 +33,13 @@ import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
-import control.ControlSettingsTab;
-import control.ControlSettingsTabMain;
-import control.ControlSettingsTabMovieGuide;
-import control.ControlSettingsTabPath;
-import control.ControlSettingsTabPlayback;
-import control.ControlSettingsTabProxy;
-import control.ControlSettingsTabRecord;
+import control.settings.ControlSettingsTab;
+import control.settings.ControlSettingsTabMain;
+import control.settings.ControlSettingsTabMovieGuide;
+import control.settings.ControlSettingsTabPath;
+import control.settings.ControlSettingsTabPlayback;
+import control.settings.ControlSettingsTabProxy;
+import control.settings.ControlSettingsTabRecord;
 
 
 public class GuiTabSettings extends GuiTab {

@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import service.SerTimerHandler;
-import control.ControlTimerTab;
+import control.timer.ControlTimerTab;
 
 public class BOTimer extends java.lang.Object {
 	public String channelId;

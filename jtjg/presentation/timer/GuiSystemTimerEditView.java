@@ -29,6 +29,8 @@ import com.jgoodies.forms.factories.*;
 import com.jgoodies.forms.layout.*;
 
 import control.*;
+import control.timer.ControlSystemTimerEditView;
+import control.timer.ControlTimerTab;
 
 public class GuiSystemTimerEditView extends JFrame{
     

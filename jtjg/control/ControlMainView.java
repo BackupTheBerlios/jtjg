@@ -42,6 +42,8 @@ import com.jgoodies.plaf.plastic.PlasticTheme;
 import com.jgoodies.plaf.plastic.PlasticXPLookAndFeel;
 import com.jgoodies.plaf.windows.ExtWindowsLookAndFeel;
 
+import control.settings.ControlSettingsTabMain;
+
 /**
  * Control-Klasse des Haupt-Fensters, beinhaltet und verwaltet das MainTabPane
  * Klasse wird beim Start der Anwendung initialisiert und ist immer verfügbar

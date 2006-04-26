@@ -25,7 +25,7 @@ import javax.swing.table.AbstractTableModel;
 import model.BOPlaybackOption;
 import service.SerAlertDialog;
 import control.ControlMain;
-import control.ControlSettingsTabPlayback;
+import control.settings.ControlSettingsTabPlayback;
 
 public class GuiPlaybackSettingsTableModel extends AbstractTableModel  {
 	

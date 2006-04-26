@@ -31,8 +31,8 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import control.ControlMain;
-import control.ControlSettingsTabProxy;
-import control.ControlTabSettings;
+import control.settings.ControlSettingsTabProxy;
+import control.settings.ControlTabSettings;
 
 public class GuiSettingsTabProxy extends JPanel implements GuiSettingsTab {
     

@@ -1,4 +1,4 @@
-package control;
+package control.timer;
 /*
 ControlNeutrinoTimerTab.java by Geist Alexander
 
@@ -38,6 +38,8 @@ import model.BOTimer;
 import model.BOTimerList;
 
 import org.apache.log4j.Logger;
+
+import control.ControlMain;
 
 import presentation.GuiMainView;
 import presentation.timer.GuiBoxTimerPanel;
