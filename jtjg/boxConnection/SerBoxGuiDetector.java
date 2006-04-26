@@ -40,16 +40,16 @@ public class SerBoxGuiDetector extends Thread {
 	
 	private static boolean isBoxGui(String boxIp,String boxGui) {
 		boolean retVal = false;
-		String tmpUrl = "http://"+boxIp;
-		if (boxGui.toLowerCase().matches(NEUTRINO)){
+		String tmpUrl = "http://"+boxIp;		
+		if (boxGui.contains(NEUTRINO)){
 			tmpUrl = tmpUrl+"/control/info";
-		}		
+		}			
 		try {
 			URL url = new URL(tmpUrl);
 			BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
 			String input;
-			while ((input = in.readLine()) != null) {
-				retVal = input.toLowerCase().contains(boxGui);
+			while ((input = in.readLine()) != null) {			
+				retVal = input.contains(boxGui);
 			}
 		} catch (Exception ioex) {
 			ioex.printStackTrace();
