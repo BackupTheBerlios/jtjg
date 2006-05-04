@@ -51,8 +51,8 @@ import control.settings.ControlSettingsTabMain;
 public class ControlMainView implements ChangeListener, SysTrayMenuListener, ActionListener {
 	
 	GuiMainView view;
-	public static final String[] themes = {"Silver", "BrownSugar", "DarkStar", "DesertBlue",
-	        "ExperienceBlue", "SkyBluerTahoma", "SkyRed"};
+	public static final String[] themes = {"BrownSugar","DarkStar","DesertBlue","DesertBluer","DesertGreen","DesertRed","DesertYellow","ExperienceBlue",
+		"ExperienceGreen","InvertedColorTheme","Silver","SkyBlue","SkyBluer","SkyGreen","SkyKrupp","SkyPink","SkyRed","SkyYellow"};
 	public static String[] skinLFThemes;
 	public static HashMap skinLFThemesMap;
 	
@@ -108,9 +108,9 @@ public class ControlMainView implements ChangeListener, SysTrayMenuListener, Act
         try {
             boolean themeChanged = this.isPlasticThemeChanged();
 			if (themeChanged) {
-				PlasticTheme inst = (PlasticTheme) (Class.forName("com.jgoodies.plaf.plastic.theme."
+				PlasticTheme inst = (PlasticTheme) (Class.forName("com.jgoodies.looks.plastic.theme."
 						+ ControlMain.getSettings().getMainSettings().getPlasticTheme())).newInstance();
-				PlasticLookAndFeel.setMyCurrentTheme(inst);
+				PlasticLookAndFeel.setCurrentTheme(inst);
 			}
 
 			if (lfChanged || themeChanged) {
