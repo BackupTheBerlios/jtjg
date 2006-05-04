@@ -39,7 +39,7 @@ import model.BOUdrecOptions;
 
 import org.apache.log4j.Logger;
 
-import com.jgoodies.plaf.plastic.Plastic3DLookAndFeel;
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 
 import control.ControlMain;
 import control.settings.ControlSettingsTabMovieGuide;

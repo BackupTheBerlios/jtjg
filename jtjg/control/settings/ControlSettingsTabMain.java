@@ -46,9 +46,10 @@ import presentation.settings.GuiThemesComboModel;
 import service.SerAlertDialog;
 import service.SerExternalProcessHandler;
 
-import com.jgoodies.plaf.plastic.Plastic3DLookAndFeel;
-import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
-import com.jgoodies.plaf.plastic.PlasticXPLookAndFeel;
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
+import com.jgoodies.looks.plastic.PlasticLookAndFeel;
+import com.jgoodies.looks.plastic.PlasticXPLookAndFeel;
+
 
 import control.ControlMain;
 import control.ControlMainView;

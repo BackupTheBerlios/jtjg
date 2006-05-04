@@ -36,11 +36,11 @@ import presentation.GuiMainView;
 import snoozesoft.systray4j.SysTrayMenuEvent;
 import snoozesoft.systray4j.SysTrayMenuListener;
 
-import com.jgoodies.plaf.plastic.Plastic3DLookAndFeel;
-import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
-import com.jgoodies.plaf.plastic.PlasticTheme;
-import com.jgoodies.plaf.plastic.PlasticXPLookAndFeel;
-import com.jgoodies.plaf.windows.ExtWindowsLookAndFeel;
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
+import com.jgoodies.looks.plastic.PlasticLookAndFeel;
+import com.jgoodies.looks.plastic.PlasticTheme;
+import com.jgoodies.looks.plastic.PlasticXPLookAndFeel;
+import com.jgoodies.looks.windows.WindowsLookAndFeel;
 
 import control.settings.ControlSettingsTabMain;
 
@@ -92,8 +92,8 @@ public class ControlMainView implements ChangeListener, SysTrayMenuListener, Act
 			UIManager.LookAndFeelInfo info = new UIManager.LookAndFeelInfo(l.getName(), PlasticXPLookAndFeel.class.getName());
 			UIManager.installLookAndFeel(info);
 			
-			ExtWindowsLookAndFeel l4 = new ExtWindowsLookAndFeel();
-			UIManager.LookAndFeelInfo info4 = new UIManager.LookAndFeelInfo(l4.getName(), ExtWindowsLookAndFeel.class.getName());
+			WindowsLookAndFeel l4 = new WindowsLookAndFeel();
+			UIManager.LookAndFeelInfo info4 = new UIManager.LookAndFeelInfo(l4.getName(), WindowsLookAndFeel.class.getName());
 			UIManager.installLookAndFeel(info4);
 		} catch (Exception e1) {
 		    Logger.getLogger("ControlMainView").error(e1.getMessage());
