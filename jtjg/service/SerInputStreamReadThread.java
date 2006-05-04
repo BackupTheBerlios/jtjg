@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 public class SerInputStreamReadThread extends Thread {
     SerInputStreamListener inputListener;
@@ -49,7 +49,7 @@ public class SerInputStreamReadThread extends Thread {
             	line=null;
             }
         } catch (IOException e) {
-            Logger.getLogger("SerInputStreamReadThread").error(e.getMessage());
+            Logger.getLogger("SerInputStreamReadThread").warning(e.getMessage());
         }
     }
 }

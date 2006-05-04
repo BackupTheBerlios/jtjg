@@ -30,7 +30,7 @@ import model.BOAfterRecordOptions;
 import model.BORecordArgs;
 import model.BOTimer;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import service.SerFormatter;
 import service.SerHelper;
@@ -104,7 +104,7 @@ public class RecordControl extends Thread implements SerProcessStopListener {
 				ControlMain.getBoxAccess().setRecordModus();
 			}
 		} catch (IOException e) {
-			Logger.getLogger("RecordControl").error(e.getMessage());
+			Logger.getLogger("RecordControl").warning(e.getMessage());
 		}
 		record.start();
 
@@ -157,7 +157,7 @@ public class RecordControl extends Thread implements SerProcessStopListener {
 			}
 
 		} catch (Exception e) {
-			Logger.getLogger("RecordControl").error(e);
+			Logger.getLogger("RecordControl").warning(e.getMessage());
 		} finally {
 			if (print != null) {
 				print.close();
@@ -209,7 +209,7 @@ public class RecordControl extends Thread implements SerProcessStopListener {
 		try {
 			ControlMain.getBoxAccess().stopRecordModus();
 		} catch (IOException e) {
-			Logger.getLogger("RecordControl").error(e.getMessage());
+			Logger.getLogger("RecordControl").warning(e.getMessage());
 		}
         this.setOldSptsStatus();
 	}

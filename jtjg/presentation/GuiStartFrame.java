@@ -19,7 +19,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
 import javax.swing.JFrame;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import service.SerGUIUtils;
 import service.SerIconManager;
@@ -33,7 +33,7 @@ public class GuiStartFrame extends JFrame {
             init();
         }
         catch (Exception e) {
-            Logger.getLogger("GuiStartFrame").error(e.getMessage());
+            Logger.getLogger("GuiStartFrame").warning(e.getMessage());
         }
     }
 

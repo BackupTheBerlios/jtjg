@@ -37,7 +37,7 @@ import model.BOSettingsPlayback;
 import model.BOSettingsRecord;
 import model.BOUdrecOptions;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 
@@ -58,7 +58,7 @@ public class SerSettingsHandler {
 		try {
 			XMLDecoder dec = new XMLDecoder(new FileInputStream(ControlMain.getSettingsFilename()),null,new ExceptionListener() {
 				public void exceptionThrown(Exception e) {
-					Logger.getLogger("ControlMain").error(e.getMessage());
+					Logger.getLogger("ControlMain").warning(e.getMessage());
 				}
 			});
 
@@ -77,7 +77,7 @@ public class SerSettingsHandler {
 				
 				
 			} catch (Exception e1) {
-				Logger.getLogger("ControlMain").error("Cant create settings: " + e1.getMessage());
+				Logger.getLogger("ControlMain").warning("Cant create settings: " + e1.getMessage());
 			}
 		}
 		

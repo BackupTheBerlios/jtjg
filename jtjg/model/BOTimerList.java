@@ -20,7 +20,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 

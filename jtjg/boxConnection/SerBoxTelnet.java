@@ -23,7 +23,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 
 import org.apache.commons.net.telnet.TelnetClient;
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 

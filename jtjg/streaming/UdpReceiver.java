@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 
 import service.SerAlertDialog;
@@ -40,7 +40,7 @@ public class UdpReceiver extends Thread {
 		try {
             udpSocket = new DatagramSocket(record.udpPort);
         } catch (SocketException e) {
-            Logger.getLogger("UdpReceiver").error(ControlMain.getProperty("err_udpSocket")+" "+record.udpPort);
+            Logger.getLogger("UdpReceiver").warning(ControlMain.getProperty("err_udpSocket")+" "+record.udpPort);
             record.recordControl.controlProgramTab.stopRecord();
         }
 	}

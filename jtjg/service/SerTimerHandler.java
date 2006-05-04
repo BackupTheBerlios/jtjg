@@ -35,7 +35,7 @@ import model.BOTimer;
 import model.BOTimerList;
 import model.BOUdrecOptions;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
@@ -102,7 +102,7 @@ public class SerTimerHandler {
             try {
                 SerXMLHandling.saveXMLFile(new File(timerFile), getTimerDocument());
             } catch (IOException e) {
-                Logger.getLogger("SerTimerHandler").error(e.getMessage());
+                Logger.getLogger("SerTimerHandler").warning(e.getMessage());
             }
         }
     }
@@ -113,7 +113,7 @@ public class SerTimerHandler {
                 getTimerDocument().getRootElement().remove(timer.getTimerNode());
                 SerXMLHandling.saveXMLFile(new File(timerFile), getTimerDocument());
             } catch (IOException e) {
-                Logger.getLogger("SerTimerHandler").error(e.getMessage());
+                Logger.getLogger("SerTimerHandler").warning(e.getMessage());
             }
         }
     }
@@ -170,7 +170,7 @@ public class SerTimerHandler {
             SerXMLHandling.saveXMLFile(new File(timerFile), getTimerDocument());
             timer.setTimerNode(localTimer);
         } catch (IOException e) {
-            Logger.getLogger("SerTimerHandler").error(e.getMessage());
+            Logger.getLogger("SerTimerHandler").warning(e.getMessage());
         }
     }
 
@@ -215,7 +215,7 @@ public class SerTimerHandler {
 		try {
             SerXMLHandling.saveXMLFile(new File(timerFile), getTimerDocument());
         } catch (IOException e) {
-            Logger.getLogger("SerTimerHandler").error(e.getMessage());
+            Logger.getLogger("SerTimerHandler").warning(e.getMessage());
         }
     }
 
@@ -322,7 +322,7 @@ public class SerTimerHandler {
                 }
             }
         } catch (Exception e) {
-            Logger.getLogger("SerTimerHandler").error(e.getMessage());
+            Logger.getLogger("SerTimerHandler").warning(e.getMessage());
         }
         return timerDocument;
     }
@@ -463,7 +463,7 @@ public class SerTimerHandler {
                 ControlMain.getBoxAccess().writeTimer(timer);
             }
         } catch (IOException e) {
-            Logger.getLogger("SerTimerHandler").error(e.getMessage());
+            Logger.getLogger("SerTimerHandler").warning(e.getMessage());
         }
     }
 

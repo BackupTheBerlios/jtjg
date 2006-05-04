@@ -24,7 +24,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 
@@ -82,7 +82,7 @@ public class DataWriteStream {
             fileOut = new BufferedOutputStream(new FileOutputStream(currentFile));
             fileList.add(fileNumber, currentFile);
         } catch (FileNotFoundException e) {
-            Logger.getLogger("UdpRecord").error(ControlMain.getProperty("err_createFiles"));
+            Logger.getLogger("UdpRecord").warning(ControlMain.getProperty("err_createFiles"));
             recordControl.controlProgramTab.stopRecord();
         }
 	}
@@ -137,7 +137,7 @@ public class DataWriteStream {
 	        try {
 	            fileOut.write(udpPacket.buffer, udpPacket.dataOffset, udpPacket.UsedLength - udpPacket.dataOffset);
 	        } catch (IOException e) {
-	            Logger.getLogger("DataWriteStream").error(ControlMain.getProperty("err_writeOutput"));
+	            Logger.getLogger("DataWriteStream").warning(ControlMain.getProperty("err_writeOutput"));
 	            recordControl.controlProgramTab.stopRecord();
 	        }
 	    }
@@ -147,7 +147,7 @@ public class DataWriteStream {
 	    try {
             fileOut.write(data);
         } catch (IOException e) {
-            Logger.getLogger("DataWriteStream").error(ControlMain.getProperty("err_writeOutput"));
+            Logger.getLogger("DataWriteStream").warning(ControlMain.getProperty("err_writeOutput"));
             recordControl.controlProgramTab.stopRecord();
         }
 	}
@@ -156,7 +156,7 @@ public class DataWriteStream {
 	    try {
             fileOut.close();
         } catch (IOException e) {
-            Logger.getLogger("DataWriteStream").error(e.getMessage());
+            Logger.getLogger("DataWriteStream").warning(e.getMessage());
         }
 	}
 }

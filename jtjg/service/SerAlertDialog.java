@@ -21,7 +21,7 @@ import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 
@@ -44,7 +44,7 @@ public class SerAlertDialog extends JFrame  {
 			ControlMain.getProperty("attention"),
 			JOptionPane.YES_OPTION
 		);
-		Logger.getLogger(loggingClass).error(ControlMain.getProperty("err_noConnection"));
+		Logger.getLogger(loggingClass).warning(ControlMain.getProperty("err_noConnection"));
 	}
 }
 

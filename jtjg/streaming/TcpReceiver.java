@@ -20,7 +20,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 import java.io.IOException;
 import java.net.Socket;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 
@@ -71,7 +71,7 @@ public class TcpReceiver extends Thread {
 			tcpSocket.close();
 			Logger.getLogger("TcpReceiver").info(ControlMain.getProperty("msg_tcpStop"));
 		} catch (IOException e) {
-			Logger.getLogger("TcpReceiver").error(ControlMain.getProperty("err_tcpStop"));
+			Logger.getLogger("TcpReceiver").warning(ControlMain.getProperty("err_tcpStop"));
 		}
 	}
 

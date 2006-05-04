@@ -47,7 +47,7 @@ import model.BORecordArgs;
 import model.BOSender;
 import model.BOTimer;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.notice.ControlNoticeBroadcastView;
 
@@ -100,14 +100,14 @@ public class ControlProgramTab extends ControlTab implements Runnable, ActionLis
 			this.setActiveBox();
 			this.firstStart = false;
 		} catch (IOException e) {
-            Logger.getLogger("ControlProgramTab").error(e.getMessage());
+            Logger.getLogger("ControlProgramTab").warning(e.getMessage());
         }
 	}
 
 	private void setActiveBox() {
 		int index = ControlMain.getIndexOfActiveBox();
 		if (index == -1) {
-			Logger.getLogger("ControlMainView").error(ControlMain.getProperty("msg_ipError"));
+			Logger.getLogger("ControlMainView").warning(ControlMain.getProperty("msg_ipError"));
 		}
 		this.getMainView().getTabProgramm().getJComboBoxBoxIP().setSelectedIndex(index);
 	}
@@ -281,7 +281,7 @@ public class ControlProgramTab extends ControlTab implements Runnable, ActionLis
 							option.getName(), execString, option.isLogOutput());
 				}
 			} catch (Exception e) {
-				Logger.getLogger("ControlProgramTab").error(e.getMessage());
+				Logger.getLogger("ControlProgramTab").warning(e.getMessage());
 			}
 		} 
 	}

@@ -59,7 +59,7 @@ import model.BOAfterRecordOptions;
 import model.BOFileWrapper;
 import model.BOPlaybackOption;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 import control.ControlTab;
@@ -358,7 +358,7 @@ public class ControlRecordEditTab extends ControlTab implements MouseListener, L
 				JOptionPane.showMessageDialog(guiTabRecordEdit, scroll, "File", JOptionPane.INFORMATION_MESSAGE);
 
 			} catch (Exception e) {
-				Logger.getLogger("ControlProgramTab").error(e.getMessage());
+				Logger.getLogger("ControlProgramTab").warning(e.getMessage());
 			}
 		}
 	}
@@ -518,7 +518,7 @@ public class ControlRecordEditTab extends ControlTab implements MouseListener, L
 			if (element.delete()) {
 				Logger.getLogger("ControlProgramTab").info(element.getAbsolutePath() + " " + ControlMain.getProperty("msg_deleted"));
 			} else {
-				Logger.getLogger("ControlProgramTab").error(element.getAbsolutePath() + " " + ControlMain.getProperty("msg_cantdelete"));
+				Logger.getLogger("ControlProgramTab").warning(element.getAbsolutePath() + " " + ControlMain.getProperty("msg_cantdelete"));
 			}
 		}
 	}

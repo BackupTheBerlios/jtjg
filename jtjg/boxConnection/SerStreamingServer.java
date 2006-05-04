@@ -25,7 +25,7 @@ import java.net.Socket;
 
 import model.BORecordArgs;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
@@ -58,7 +58,7 @@ public class SerStreamingServer extends Thread {
 			}	
 		} catch (DocumentException e) {
 		    isRunning=false;
-			Logger.getLogger("SerStreamingServer").error("Not valid XML-Stream");	
+			Logger.getLogger("SerStreamingServer").warning("Not valid XML-Stream");	
 		}
 	}
     
@@ -127,7 +127,7 @@ public class SerStreamingServer extends Thread {
 				return true;
 			}
 		} catch (IOException e) {
-			Logger.getLogger("SerStreamingServer").error("StreamingServer stop failed");	
+			Logger.getLogger("SerStreamingServer").warning("StreamingServer stop failed");	
 		}
 		return false;
 	}

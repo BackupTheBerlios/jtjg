@@ -22,7 +22,7 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -52,7 +52,7 @@ public class BOMovieGuideContainer{
 			DoEx.printStackTrace();	
 		}
 		 catch(MalformedURLException MEx){
-		    Logger.getLogger("ControlMovieGuideTab").error(file.getName()+" not found");	
+		    Logger.getLogger("ControlMovieGuideTab").warning(file.getName()+" not found");	
 		 }
 			//long x = System.currentTimeMillis();
 		 
@@ -111,7 +111,7 @@ public class BOMovieGuideContainer{
 				}
 			}		
     	}catch (Exception e) {
-	           Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_read_mg"));	
+	           Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_read_mg"));	
 		}			
     	
 //		 System.out.println("Dauer: " + (System.currentTimeMillis() - x));

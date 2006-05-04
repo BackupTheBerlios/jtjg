@@ -27,7 +27,7 @@ import model.BOPid;
 import model.BOPids;
 import model.BORecordArgs;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import service.SerAlertDialog;
 import control.ControlMain;

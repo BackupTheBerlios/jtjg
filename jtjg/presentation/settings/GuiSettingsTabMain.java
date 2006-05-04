@@ -33,7 +33,7 @@ import javax.swing.JTable;
 import javax.swing.table.TableColumn;
 import javax.swing.text.MaskFormatter;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import presentation.program.GuiBoxSettingsTableCellRenderer;
 import service.SerIconManager;
@@ -369,7 +369,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 				((MaskFormatter) tfServerPort.getFormatter()).setOverwriteMode(true);
 				tfServerPort.setPreferredSize(new java.awt.Dimension(40, 19));
 			} catch (ParseException e) {
-			    Logger.getLogger("GuiSettingsTabRecord").error(e.getMessage());
+			    Logger.getLogger("GuiSettingsTabRecord").warning(e.getMessage());
 			}
 		}
 		return tfServerPort;

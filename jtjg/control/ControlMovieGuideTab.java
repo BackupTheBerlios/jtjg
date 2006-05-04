@@ -41,7 +41,7 @@ import model.BOSender;
 import model.BOSettingsMovieGuide;
 import model.BOTimer;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import presentation.GuiMainView;
 import presentation.movieguide.GuiMovieGuideFilmTableModel;
@@ -96,14 +96,14 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
           try{
               new SerMovieGuide2Xml(null, this.getMainView()).start();
           }catch (Exception ex){
-              Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+              Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
           }              	
       	}
       	if(getSettings().getMgLoadType()==0 && (!movieGuideFileNext.exists()) && (SerMovieGuide2Xml.checkNewMovieGuide()) && (movieGuideFile.exists())){       
       	    try{
       	        new SerMovieGuide2Xml(null, this.getMainView()).start();
       	    }catch (Exception ex){
-      	        Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+      	        Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
       	    }              	
       	}
       	this.buildMG();
@@ -118,7 +118,7 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
           		try{
     				new SerMovieGuide2Xml(null, this.getMainView()).start();
     			}catch (Exception ex){
-    				Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+    				Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
     			}
           	}
       	}     
@@ -127,7 +127,7 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
           		try{
     				new SerMovieGuide2Xml(null, this.getMainView()).start();
     			}catch (Exception ex){
-    				Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+    				Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
     			}
           	}else{
           		movieList.importXML(movieGuideFile,getSettings().getMgSelectedChannels());	
@@ -212,14 +212,14 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
 			try{
 				new SerMovieGuide2Xml(null, this.getMainView()).start();
 			}catch (Exception ex){
-				Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+				Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
 			}		
 		}
 		if( (SerMovieGuide2Xml.checkNewMovieGuide()) && (!movieGuideFileNext.exists())){
 			try{
 				new SerMovieGuide2Xml(null, this.getMainView()).start();
 			}catch (Exception ex){
-				Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_not_download"));
+				Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_not_download"));
 			}
 		}
 	}
@@ -546,7 +546,7 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
             
             SerTimerHandler.saveTimer(botimer, true, true);
         } catch (IOException e) {            
-            Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_sender"));
+            Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_sender"));
         }		
 	}
 	
@@ -603,7 +603,7 @@ public class ControlMovieGuideTab extends ControlTab implements ActionListener,I
 			try{
 				new SerMovieGuide2Xml(path, this.getMainView()).start();
 			}catch (Exception e) {
-				Logger.getLogger("ControlMovieGuideTab").error(ControlMain.getProperty("error_read_mg"));	
+				Logger.getLogger("ControlMovieGuideTab").warning(ControlMain.getProperty("error_read_mg"));	
 			}
 		}
 	}

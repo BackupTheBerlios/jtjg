@@ -30,7 +30,7 @@ import model.BOSender;
 import model.BOTimer;
 import model.BOTimerList;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import presentation.timer.GuiRecordTimerTableModel;
 import presentation.timer.GuiSystemTimerTableModel;
@@ -61,7 +61,7 @@ public abstract class SerBoxControl {
             try {
                 reReadTimerList();
             } catch (IOException e) {
-                Logger.getLogger("SerBoxControl").error(ControlMain.getProperty("err_read_timer"));
+                Logger.getLogger("SerBoxControl").warning(ControlMain.getProperty("err_read_timer"));
             }
             newTimerAdded=false;
         }

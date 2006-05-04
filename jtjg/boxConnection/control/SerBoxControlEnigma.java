@@ -21,7 +21,7 @@ import model.BOSender;
 import model.BOTimer;
 import model.BOTimerList;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 
 import presentation.timer.GuiEnigmaRecordTimerTableModel;
@@ -269,7 +269,7 @@ public class SerBoxControlEnigma extends SerBoxControl {
 	public String zapTo(String channelId) throws IOException {
 		String status = "ok";
 		if (isRecording()) {
-		    Logger.getLogger("SerBoxControlEnigma").error(ControlMain.getProperty("err_zappingRecord"));
+		    Logger.getLogger("SerBoxControlEnigma").warning(ControlMain.getProperty("err_zappingRecord"));
 		    status="error";
 		} else {
 		    BufferedReader input = getConnection("/cgi-bin/zapTo?path="+channelId);

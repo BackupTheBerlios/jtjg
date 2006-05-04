@@ -26,7 +26,7 @@ import java.net.URLConnection;
 
 import model.BOSettingsProxy;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 
@@ -60,10 +60,10 @@ public abstract class SerWebsiteContentLoader {
             }
         }
         catch (IOException e) {
-            Logger.getLogger("SerWebsiteContentLoader").error(e.getMessage()); 
+            Logger.getLogger("SerWebsiteContentLoader").warning(e.getMessage()); 
         }
         catch (Exception e) {
-            Logger.getLogger("SerWebsiteContentLoader").error(e.getMessage());
+            Logger.getLogger("SerWebsiteContentLoader").warning(e.getMessage());
         }
         return htmlContent.toString();
     }

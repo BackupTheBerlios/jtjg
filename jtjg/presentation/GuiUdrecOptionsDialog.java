@@ -36,7 +36,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.text.MaskFormatter;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import model.BOUdrecOptions;
 import service.SerGUIUtils;
@@ -287,7 +287,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 				jTextFieldTcp = new JFormattedTextField(new MaskFormatter("#####"));
 				jTextFieldTcp.setText(this.getUdrecOptions().getTcpPort());
 			} catch (ParseException e) {
-			    Logger.getLogger("GuiUdrecOptionsDialog").error(e.getMessage());
+			    Logger.getLogger("GuiUdrecOptionsDialog").warning(e.getMessage());
 			}
 		}
 		return jTextFieldTcp;
@@ -301,7 +301,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 				jTextFieldUdp = new JFormattedTextField(new MaskFormatter("#####"));
 				jTextFieldUdp.setText(this.getUdrecOptions().getUdpPort());
 			} catch (ParseException e) {
-			    Logger.getLogger("GuiUdrecOptionsDialog").error(e.getMessage());
+			    Logger.getLogger("GuiUdrecOptionsDialog").warning(e.getMessage());
 			}
 		}
 		return jTextFieldUdp;

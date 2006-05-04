@@ -4,7 +4,7 @@ import java.beans.*;
 import java.io.*;
 import java.util.*;
 
-import org.apache.log4j.*;
+import java.util.logging.Logger;
 
 import control.*;
 
@@ -59,7 +59,7 @@ public class BORecordInfos extends Vector {
 				infos = (BORecordInfos) dec.readObject();
 				dec.close();
 			} catch (FileNotFoundException e) {
-				Logger.getLogger("ControlProgrammTab").error(e.getMessage());
+				Logger.getLogger("ControlProgrammTab").warning(e.getMessage());
 				e.printStackTrace();
 			}
 
@@ -79,7 +79,7 @@ public class BORecordInfos extends Vector {
 						enc.writeObject(infos);
 						enc.close();
 					} catch (FileNotFoundException e) {
-						Logger.getLogger("ControlProgrammTab").error(e.getMessage());
+						Logger.getLogger("ControlProgrammTab").warning(e.getMessage());
 						e.printStackTrace();
 					}
 					infos.setChanged(false);

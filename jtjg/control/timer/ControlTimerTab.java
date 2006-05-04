@@ -37,7 +37,7 @@ import model.BOSender;
 import model.BOTimer;
 import model.BOTimerList;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 
@@ -70,7 +70,7 @@ public class ControlTimerTab extends Thread implements ActionListener, MouseList
 			timerType = ControlMain.getBoxAccess().getTimerType();
             this.setSenderList(ControlMain.getBoxAccess().getAllSender());
         } catch (IOException e) {
-            Logger.getLogger("ControlTimerTab").error(e.getMessage());
+            Logger.getLogger("ControlTimerTab").warning(e.getMessage());
         }
 	}
 	

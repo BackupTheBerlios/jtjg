@@ -28,7 +28,7 @@ import javax.swing.UIManager;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import presentation.GuiLogWindow;
 import presentation.GuiMainTabPane;
@@ -96,7 +96,7 @@ public class ControlMainView implements ChangeListener, SysTrayMenuListener, Act
 			UIManager.LookAndFeelInfo info4 = new UIManager.LookAndFeelInfo(l4.getName(), WindowsLookAndFeel.class.getName());
 			UIManager.installLookAndFeel(info4);
 		} catch (Exception e1) {
-		    Logger.getLogger("ControlMainView").error(e1.getMessage());
+		    Logger.getLogger("ControlMainView").warning(e1.getMessage());
 		}
 	}
 
@@ -123,7 +123,7 @@ public class ControlMainView implements ChangeListener, SysTrayMenuListener, Act
 				}
 			}
 	    } catch (Exception e) {
-	        Logger.getLogger("ControlMainView").error(e.getMessage());
+	        Logger.getLogger("ControlMainView").warning(e.getMessage());
 	    }    
 	}
 	

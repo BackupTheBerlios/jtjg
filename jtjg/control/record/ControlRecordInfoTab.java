@@ -32,7 +32,7 @@ import javax.swing.event.*;
 
 import model.*;
 
-import org.apache.log4j.*;
+import java.util.logging.Logger;
 
 import control.ControlMain;
 import control.ControlTab;
@@ -240,7 +240,7 @@ public class ControlRecordInfoTab extends ControlTab implements MouseListener, L
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			Logger.getLogger("RecordControl").error(e);
+			Logger.getLogger("RecordControl").warning(e.getMessage());
 		} finally {
 			if (print != null) {
 				print.close();
@@ -477,7 +477,7 @@ public class ControlRecordInfoTab extends ControlTab implements MouseListener, L
 				JOptionPane.showMessageDialog(guiTabRecordInfo, scroll, "File", JOptionPane.INFORMATION_MESSAGE);
 
 			} catch (Exception e) {
-				Logger.getLogger("ControlProgramTab").error(e.getMessage());
+				Logger.getLogger("ControlProgramTab").warning(e.getMessage());
 			}
 		}
 	}

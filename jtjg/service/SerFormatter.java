@@ -13,7 +13,7 @@ import java.awt.Color;
 
 import javax.swing.ImageIcon;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 /**
  * @author ralix
  */
@@ -251,7 +251,7 @@ public class SerFormatter {
 		            cal.setTimeInMillis(SerFormatter.setCorrectYear(formatter.parse(date)).getTime());
 		            calCache.put(date + "|" + format,cal);
 		        }catch(ParseException pex){
-                    Logger.getLogger("SerFormatter").error(pex.getMessage());
+                    Logger.getLogger("SerFormatter").warning(pex.getMessage());
 		        }
 	    	}
     	}
@@ -262,7 +262,7 @@ public class SerFormatter {
 	        try {
 	            cal.setTimeInMillis(SerFormatter.setCorrectYear(formatter.parse(date)).getTime());
 	        }catch(ParseException pex){
-                Logger.getLogger("SerFormatter").error(pex.getMessage());
+                Logger.getLogger("SerFormatter").warning(pex.getMessage());
 	        }
     	}
         return cal;
@@ -323,7 +323,7 @@ public class SerFormatter {
          StyleConstants.setIcon(style, new ImageIcon(path));
          doc.insertString(doc.getLength(), " ", style);
         } catch (BadLocationException e) {
-            Logger.getLogger("SerFormatter").error(e.getMessage());
+            Logger.getLogger("SerFormatter").warning(e.getMessage());
         }
     }
     
@@ -335,7 +335,7 @@ public class SerFormatter {
             	doc.insertString(pos, pattern, style);            	
             	StyleConstants.setUnderline(style, false);
         } catch (BadLocationException e) {
-            Logger.getLogger("SerFormatter").error(e.getMessage());
+            Logger.getLogger("SerFormatter").warning(e.getMessage());
         }    
     }
     
@@ -349,7 +349,7 @@ public class SerFormatter {
                 hilite.addHighlight(m.start(0), m.start(0)+pattern.length(), myHighlightPainter);        
     	    }              
         } catch (BadLocationException e) {
-            Logger.getLogger("SerFormatter").error(e.getMessage());
+            Logger.getLogger("SerFormatter").warning(e.getMessage());
         }
     }
     public static void removeHighlights(JTextComponent textComp) {

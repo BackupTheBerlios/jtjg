@@ -4,7 +4,7 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import model.*;
 import service.recordinfo.*;
@@ -40,9 +40,9 @@ public class SerHelper {
             os.close();
             return ret;
         } catch (IOException e) {
-            Logger.getLogger("SerHelper").error(e.getMessage());
+            Logger.getLogger("SerHelper").warning(e.getMessage());
         } catch (ClassNotFoundException e) {
-            Logger.getLogger("SerHelper").error(e.getMessage());
+            Logger.getLogger("SerHelper").warning(e.getMessage());
         }
         return null;
     }

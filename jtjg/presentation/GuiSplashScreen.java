@@ -31,7 +31,7 @@ import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JProgressBar;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 public class GuiSplashScreen extends JDialog {
 	private Image image;
@@ -67,7 +67,7 @@ public class GuiSplashScreen extends JDialog {
             back = new Robot().createScreenCapture(getBounds());
         }
         catch (AWTException e) {
-            Logger.getLogger("GuiSplashScreen").error(e.getMessage());
+            Logger.getLogger("GuiSplashScreen").warning(e.getMessage());
         }
         Graphics g = back.getGraphics();
         g.drawImage(image, 0, 0, this);

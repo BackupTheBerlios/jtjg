@@ -35,7 +35,7 @@ import model.BOSender;
 import model.BOTimer;
 import model.BOTimerList;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 
 import presentation.timer.GuiNeutrinoRecordTimerTableModel;
@@ -110,11 +110,14 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 			StringTokenizer st = new StringTokenizer(line);
 		  	
 			String number = Integer.toHexString(Integer.parseInt(st.nextToken()));
+			StringBuffer namebf = new StringBuffer();
 			String name = new String();
 			while (st.hasMoreElements()) {
-		  	 	name += " "+st.nextToken();    
+		  	 	//name += " "+st.nextToken();    
+		  	 	namebf = namebf.append(" ");
+		  	 	namebf = namebf.append(st.nextToken());
 			}
-			name=name.trim();
+			name = namebf.toString().trim();			
 		  	 
 			if (name!= null && name.equals("vtxt")) {
 		  	 	pids.setVtxtPid(new BOPid(number, name, 2));

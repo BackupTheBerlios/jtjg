@@ -39,10 +39,9 @@ import model.BOSettingsPlayback;
 import model.BOSettingsProxy;
 import model.BOSettingsRecord;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 import org.dom4j.Document;
+
+import java.util.logging.Logger;
 
 import presentation.GuiLogWindow;
 import presentation.GuiSplashScreen;
@@ -164,17 +163,14 @@ public class ControlMain {
 		logWindow.setVisible(ControlMain.getSettingsMain().isShowLogWindow());
 	}
 
-	public static void startLogger() {
-		PatternLayout layout = new PatternLayout();
-		//http://logging.apache.org/log4j/docs/api/org/apache/log4j/PatternLayout.html
-		layout.setConversionPattern("%d{HH:mm:ss:ms} %-5p %c - %m%n");
-		try {
-			SerLogAppender logAppender = new SerLogAppender(layout);
-			logAppender.setMaxBackupIndex(3); //Number of max Backup-Files
-			logAppender.setMaxFileSize("100KB");
-			BasicConfigurator.configure(logAppender);
-		} catch (IOException e) {
-		}
+	public static void startLogger() {		
+	        try{
+	            java.util.logging.FileHandler fh = new SerLogAppender("xmgLog.log", 0x19000, 3);
+	            Logger.getLogger("").addHandler(fh);
+	        }
+	        catch(IOException e1){
+	            e1.printStackTrace();
+	        }
 	}
 
 	public synchronized static boolean detectImage() {
@@ -327,7 +323,8 @@ public class ControlMain {
 			properties.load(url.openStream());
 			splash.setProgress(5, ControlMain.getProperty("progress_settings"));
 		} catch (IOException ex) {
-			Logger.getLogger("ControlMain").error(ControlMain.getProperty("msg_propertyError") + locale);
+			Logger.getLogger("ControlMain").warning(ControlMain.getProperty("msg_propertyError") + locale);
+			
 		}
 	}
 	/**
@@ -385,7 +382,7 @@ public class ControlMain {
                     log("Settings saved");
                 }
             } catch (Exception e1) {
-                Logger.getLogger("ControlMain").error("Error while save Settings");
+                Logger.getLogger("ControlMain").warning("Error while save Settings");
             }
             System.exit(0);        
         }

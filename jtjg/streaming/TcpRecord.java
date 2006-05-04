@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import service.SerAlertDialog;
 
@@ -105,7 +105,7 @@ public class TcpRecord extends Record{
                 writeStream[i].stop();
             }
         } catch (IOException e) {
-            Logger.getLogger("TcpRecord").error(ControlMain.getProperty("err_tcpStop"));
+            Logger.getLogger("TcpRecord").warning(ControlMain.getProperty("err_tcpStop"));
         } catch (NullPointerException e) {
             //doNothing Aufnahmeabbruch vor dem Start
         }

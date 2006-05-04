@@ -30,7 +30,7 @@ import javax.swing.JProgressBar;
 
 import model.BOSettingsProxy;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
@@ -231,7 +231,7 @@ public class SerMovieGuide2Xml extends Thread{
             System.getProperties().remove("proxyPort");
         }
     }catch (IOException ioex){	
-         Logger.getLogger("SerMovieGuide2Xml").error(ioex.getMessage());	
+         Logger.getLogger("SerMovieGuide2Xml").warning(ioex.getMessage());	
     }
     return value;
     }

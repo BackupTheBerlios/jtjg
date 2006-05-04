@@ -1,6 +1,6 @@
 package model;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 import service.SerErrorStreamReadThread;
 import service.SerInputStreamListener;
@@ -87,7 +87,7 @@ public class BOExternalProcess extends Thread {
 		        this.getStopListener().processStopped(exitValue, this.progName);
 		    }
 		} catch (Exception e) {
-		    Logger.getLogger("BOExternalProcess").error(e.getMessage());
+		    Logger.getLogger("BOExternalProcess").warning(e.getMessage());
 		} 
 	}
 	

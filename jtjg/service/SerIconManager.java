@@ -17,7 +17,7 @@ import java.util.Map;
 
 import javax.swing.ImageIcon;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 public class SerIconManager {
     private static SerIconManager instance = null;
@@ -31,7 +31,7 @@ public class SerIconManager {
     public static SerIconManager getInstance() {
         if (instance == null) {
             instance = new SerIconManager();
-            logger = Logger.getLogger(instance.getClass());
+            logger = Logger.getLogger(instance.getClass().getName());
         }
         return instance;
     }
@@ -49,7 +49,7 @@ public class SerIconManager {
             }
         }
         catch (Exception e) {
-            logger.error("Icon " + key + " not found", e);
+            logger.warning("Icon " + key + " not found"+" "+e.getMessage());
         }
         return result;
     }
