@@ -116,7 +116,7 @@ public class GuiTimerEditView extends JDialog {
 			mainPanel = new JPanel();
 			FormLayout layout = new FormLayout("pref, 25, pref:grow", //columns
 					"pref, 10, pref, 15, t:pref, 15, pref, 15, pref, 15, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(mainPanel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,mainPanel);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
@@ -136,7 +136,7 @@ public class GuiTimerEditView extends JDialog {
             panelRecordSettings = new JPanel();
             FormLayout layout = new FormLayout("pref:grow, 5, pref", //columns
                     "pref, pref, pref, pref, pref, 10, pref, pref, pref, pref, 15, pref, 5, pref"); //rows
-            PanelBuilder builder = new PanelBuilder(panelRecordSettings, layout);
+            PanelBuilder builder = new PanelBuilder(layout,panelRecordSettings);
             CellConstraints cc = new CellConstraints();
 
             builder.addSeparator(ControlMain.getProperty("label_recordSettings"), cc.xyw(1, 1, 3));
@@ -162,7 +162,7 @@ public class GuiTimerEditView extends JDialog {
 			panelEngineSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref, 5, pref, 5, 150:grow", //columns
 					"pref, pref, pref, pref, pref, 10, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelEngineSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelEngineSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_engine"), cc.xywh(1, 1, 5, 1));
@@ -183,7 +183,7 @@ public class GuiTimerEditView extends JDialog {
 			panelFileNameSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref,10,350:grow,10,pref,5,pref", //columns
 					"pref, pref,pref,pref,pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelFileNameSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelFileNameSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("filep_filepattern"), cc.xyw(1, 1, 7));
@@ -205,7 +205,7 @@ public class GuiTimerEditView extends JDialog {
 			panelRecordPath = new JPanel();
 			FormLayout layout = new FormLayout("pref, 10, f:pref:grow, 5, pref", // columns
 					"pref"); // rows
-			PanelBuilder builder = new PanelBuilder(panelRecordPath, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelRecordPath);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
@@ -221,7 +221,7 @@ public class GuiTimerEditView extends JDialog {
 			panelMainOptions = new JPanel();
 			FormLayout layout = new FormLayout("100, 5, 60, 3, 40, 5, 40, 5, 90, 5, pref:grow", // columns
 					"pref, 5, pref"); // rows
-			PanelBuilder builder = new PanelBuilder(panelMainOptions, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelMainOptions);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(new JLabel(ControlMain.getProperty("sender")), cc.xy(1, 1));
@@ -244,7 +244,7 @@ public class GuiTimerEditView extends JDialog {
 			jPanelDauerTimer = new JPanel();
 			FormLayout layout = new FormLayout("pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref", //columna
 					"pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelDauerTimer, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelDauerTimer);
 			CellConstraints cc = new CellConstraints();
 
 			int a = 1;

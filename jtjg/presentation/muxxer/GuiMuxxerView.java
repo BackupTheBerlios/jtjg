@@ -99,7 +99,7 @@ public class GuiMuxxerView extends JDialog{
 			mainPanel = new JPanel();
 			FormLayout layout = new FormLayout("pref:grow, 25, pref", //columns
 					"pref, 15, pref, 5, pref, pref, pref, 5, pref, 10, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(mainPanel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,mainPanel);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 			
@@ -124,7 +124,7 @@ public class GuiMuxxerView extends JDialog{
             panelProgress = new JPanel();
             FormLayout layout = new FormLayout("pref, 10, pref:grow", //columns
                     "pref, 5, pref"); //rows
-            PanelBuilder builder = new PanelBuilder(panelProgress, layout);
+            PanelBuilder builder = new PanelBuilder(layout,panelProgress);
             builder.setDefaultDialogBorder();
             CellConstraints cc = new CellConstraints();
             

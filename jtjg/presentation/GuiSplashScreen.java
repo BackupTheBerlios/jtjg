@@ -36,7 +36,6 @@ import java.util.logging.Logger;
 public class GuiSplashScreen extends JDialog {
 	private Image image;
     private JProgressBar progress;
-    private JLayeredPane panel;
     private String title;
 
     public GuiSplashScreen(Frame parent, Image image, String text, int progressMin, int progressMax) {

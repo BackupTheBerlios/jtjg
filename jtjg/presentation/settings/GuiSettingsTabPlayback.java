@@ -84,7 +84,7 @@ public class GuiSettingsTabPlayback extends JPanel implements GuiSettingsTab {
         FormLayout layout = new FormLayout(
 				  "f:pref:grow",  		// columns 
 				  "f:pref"); 			// rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -97,7 +97,7 @@ public class GuiSettingsTabPlayback extends JPanel implements GuiSettingsTab {
 			FormLayout layout = new FormLayout(
 			        "pref:grow, pref:grow, 5, pref",	 		//columna 
 			  "pref, 10, pref, pref, 15, pref, pref, 80, 10, pref, 10, pref, pref, pref, 30");	//rows
-			PanelBuilder builder = new PanelBuilder(panelPlaybackSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelPlaybackSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_playbackOptions"),			cc.xyw	(1, 1, 4));

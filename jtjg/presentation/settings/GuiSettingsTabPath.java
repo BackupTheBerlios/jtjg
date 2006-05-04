@@ -70,7 +70,7 @@ public class GuiSettingsTabPath extends JPanel implements GuiSettingsTab {
         FormLayout layout = new FormLayout(
 				  "pref, 10, f:pref:grow, 5, pref",  		// columns 
 				  "pref, 10, pref, pref, pref, pref, pref, pref,pref"); 			// rows
-				PanelBuilder builder = new PanelBuilder(this, layout);
+				PanelBuilder builder = new PanelBuilder(layout,this);
 				builder.setDefaultDialogBorder();
 				CellConstraints cc = new CellConstraints();
 				

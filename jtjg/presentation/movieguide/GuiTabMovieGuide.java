@@ -116,7 +116,7 @@ public class GuiTabMovieGuide extends JPanel {
 		FormLayout layout = new FormLayout(	
 			      "320px:grow,10, 400px:grow",  				// columns
 			      "pref, f:200px:grow, 10, pref, pref, pref");	// rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 		builder.addSeparator(ControlMain.getProperty("datum"),  cc.xywh	(1, 1, 1, 1));
@@ -141,7 +141,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "320px:grow",									//column 
 				      "pref, pref, 120px:grow, pref");		//rows
-			PanelBuilder builder = new PanelBuilder(jPanelChannel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelChannel);
 			CellConstraints cc = new CellConstraints();			
 			builder.add(this.getJPanelDatum(),		  		cc.xyw	(1, 1, 1, CellConstraints.FILL, CellConstraints.FILL));
 			builder.addSeparator(ControlMain.getProperty("titel"),	cc.xyw	(1, 2, 1));
@@ -158,7 +158,7 @@ public class GuiTabMovieGuide extends JPanel {
 				      "400px:grow",									//column 				
 						"f:115:grow, f:100px:grow, f:42px:grow, f:pref:grow, f:pref:grow, f:pref:grow, f:pref:grow");		//rows
 					
-			PanelBuilder builder = new PanelBuilder(jPanelInfo, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelInfo);
 			CellConstraints cc = new CellConstraints();														
 			builder.add(this.getJScrollPaneTimer(),			cc.xy	(1, 1));			
 			builder.add(this.getJScrollPaneInfo(), 			cc.xy	(1, 2));	
@@ -177,7 +177,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "230px:grow,90px:grow",	 		//columna 
 				      "pref");	//rows					
-			PanelBuilder builder = new PanelBuilder(jPanelSuche, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelSuche);
 			CellConstraints cc = new CellConstraints();					
 			builder.add(this.getTfSuche(),			 cc.xyw	(1, 1, 1));	
 			builder.add(this.getJButtonSuche(),		 cc.xyw	(2, 1, 1));			
@@ -210,7 +210,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "110px:grow,10,140px:grow,10,60px:grow",	 		//columna 
 				      "pref,pref,pref");	//rows					
-			PanelBuilder builder = new PanelBuilder(jPanelSucheErw, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelSucheErw);
 			CellConstraints cc = new CellConstraints();										
 			builder.add(this.getComboBoxSucheNach(), 	cc.xyw	(1, 1, 1));
 			builder.add(this.getJLabelSearchCount(), 	cc.xyw	(3, 1, 1));
@@ -230,7 +230,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "320px:grow",	 		//columna 
 				      "20,pref,5,pref");	//rows					
-			PanelBuilder builder = new PanelBuilder(jPanelProgressBar, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelProgressBar);
 			CellConstraints cc = new CellConstraints();	
 			builder.addSeparator(ControlMain.getProperty("fortschritt"), cc.xyw	(1, 2, 1));			
 			builder.add(this.getJProgressBarDownload(),	 cc.xyw	(1, 4, 1));												
@@ -243,7 +243,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "190px:grow,100px:grow,pref",	 		//columna 
 				      "pref");	//rows					
-			PanelBuilder builder = new PanelBuilder(jPanelDownload, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelDownload);
 			CellConstraints cc = new CellConstraints();														
 			builder.add(this.getJButtonDownload(),			 cc.xyw	(1, 1, 1));	
 			builder.add(this.getJButtonMovieGuideFileChooser(),	 cc.xyw	(2, 1, 1));			
@@ -263,7 +263,7 @@ public class GuiTabMovieGuide extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "240px:grow,80px:grow",	 		//columna 
 				      "pref");	//rows					
-			PanelBuilder builder = new PanelBuilder(jPanelDatum, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelDatum);
 			CellConstraints cc = new CellConstraints();														
 			builder.add(this.getComboBoxDatum(),	 cc.xyw	(1, 1, 1));	
 			builder.add(this.getJButtonDatumAll(),	 cc.xyw	(2, 1, 1));									

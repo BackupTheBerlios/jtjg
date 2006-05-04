@@ -109,7 +109,7 @@ public class GuiTabProgramm extends GuiTab {
 	protected void initialize() {
 		FormLayout layout = new FormLayout("f:pref, 10, f:pref, 10, f:340:grow", // columns
 				"f:310:grow, 10, f:pref, 5, pref"); // rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -128,7 +128,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelSouth = new JPanel();
 			FormLayout layout = new FormLayout("f:pref, 10, f:pref, 10, f:340:grow", // columns
 			"f:pref, 5, pref"); // rows
-			PanelBuilder builder = new PanelBuilder(jPanelSouth, layout);
+			PanelBuilder builder = new PanelBuilder( layout,jPanelSouth);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(this.getJPanelButtonsAktionen(), 	cc.xywh(1, 1, 1, 1));
@@ -148,7 +148,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelEpgDetails = new JPanel();
 			FormLayout layout = new FormLayout("f:d:grow", //columns
 					"pref, 5, f:d:grow"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelEpgDetails, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelEpgDetails);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_epgDetails"), cc.xy(1, 1, CellConstraints.FILL, CellConstraints.TOP));
@@ -167,7 +167,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelEpg = new JPanel();
 			FormLayout layout = new FormLayout("f:d:grow, pref, 5, pref", //columns
 					"f:pref, f:d:grow, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelEpg, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelEpg);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_epg"), cc.xyw(1, 1, 4));
@@ -188,7 +188,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelButtonsAktionen = new JPanel();
 			FormLayout layout = new FormLayout("30, 130", //columna
 					"pref, 5, pref, 5, pref, 5, pref, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelButtonsAktionen, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelButtonsAktionen);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_actions"), cc.xywh(1, 1, 2, 1));
@@ -206,7 +206,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelRecordInfo = new JPanel();
 			FormLayout layout = new FormLayout("pref", //columna
 					"pref, 5, pref, 5, pref, 2, 25, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelRecordInfo, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelRecordInfo);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_recordInfo"), cc.xy(1, 1));
@@ -223,7 +223,7 @@ public class GuiTabProgramm extends GuiTab {
 			jPanelChannel = new JPanel();
 			FormLayout layout = new FormLayout("100,100", //column
 					"pref, pref, 4, pref, pref, min:grow, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelChannel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelChannel);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_date"), cc.xyw(1, 1, 2));

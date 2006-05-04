@@ -81,7 +81,7 @@ public class GuiTabRecordInfo extends GuiTab {
 
 		FormLayout layout = new FormLayout("pref:grow", // columns
 				"55,75,pref, f:150:grow"); // rows
-		PanelBuilder builder = new PanelBuilder(currentRec, layout);
+		PanelBuilder builder = new PanelBuilder(layout,currentRec);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -103,7 +103,7 @@ public class GuiTabRecordInfo extends GuiTab {
 				"pref,5,pref"); // rows
 
 		p.setLayout(layout);
-		PanelBuilder builder = new PanelBuilder(p, layout);
+		PanelBuilder builder = new PanelBuilder(layout,p);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -139,7 +139,7 @@ public class GuiTabRecordInfo extends GuiTab {
 				"30"); // rows
 
 		bitrate.setLayout(layoutBitrate);
-		PanelBuilder builder = new PanelBuilder(bitrate, layoutBitrate);
+		PanelBuilder builder = new PanelBuilder(layoutBitrate,bitrate);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 		//builder.addSeparator(ControlMain.getProperty("label_recordBitRate"), cc.xywh(1, 1, 1, 1));
@@ -158,7 +158,7 @@ public class GuiTabRecordInfo extends GuiTab {
 				"15,pref"); // rows
 
 		p.setLayout(layout);
-		builder = new PanelBuilder(p, layout);
+		builder = new PanelBuilder(layout,p);
 		builder.setDefaultDialogBorder();
 		cc = new CellConstraints();
 
@@ -183,7 +183,7 @@ public class GuiTabRecordInfo extends GuiTab {
 				"pref, 10,f:120:grow"); // rows
 
 		p.setLayout(layout);
-		PanelBuilder builder = new PanelBuilder(p, layout);
+		PanelBuilder builder = new PanelBuilder(layout,p);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -214,7 +214,7 @@ public class GuiTabRecordInfo extends GuiTab {
 				"pref, 10,f:120:grow"); // rows
 
 		p.setLayout(layout);
-		PanelBuilder builder = new PanelBuilder(p, layout);
+		PanelBuilder builder = new PanelBuilder(layout,p);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 

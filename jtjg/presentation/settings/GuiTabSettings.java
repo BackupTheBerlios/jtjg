@@ -94,7 +94,7 @@ public class GuiTabSettings extends GuiTab {
         menuList.setSelectedValue(optionPanels[0], true);
           
 		FormLayout layout = new FormLayout( "f:pref, f:pref:grow", "f:pref:grow");
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		CellConstraints cc = new CellConstraints();
 		
         builder.add(menuList,                   cc.xy(1,1));

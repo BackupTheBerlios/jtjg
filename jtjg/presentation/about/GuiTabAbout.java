@@ -66,7 +66,7 @@ public class GuiTabAbout extends JPanel {
 		FormLayout layout = new FormLayout(
 						  "200:grow, 8dlu, pref:grow",  		// columns 
 						  "pref, 4dlu, f:50:grow, 4dlu, pref, 4dlu, f:320:grow, pref"); 			// rows
-				PanelBuilder builder = new PanelBuilder(this, layout);
+				PanelBuilder builder = new PanelBuilder(layout,this);
 				builder.setDefaultDialogBorder();
 				CellConstraints cc = new CellConstraints();
 		
@@ -85,7 +85,7 @@ public class GuiTabAbout extends JPanel {
 			FormLayout layout = new FormLayout(
 			        "f:pref:grow, f:20,  f:pref:grow",	 		//columns 
 			  "pref, pref, 5, pref, pref, pref, pref, pref");							//rows
-			PanelBuilder builder = new PanelBuilder(jGrabberInfo, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jGrabberInfo);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(this.getLabelJgrabber(),								cc.xywh	(1, 1, 3, 1));

@@ -99,7 +99,7 @@ public class GuiBoxTimerPanel extends JPanel {
 		FormLayout layout = new FormLayout(
 			      "f:320:grow, 10, 100:grow, 160:grow, 7, pref",							// columns
 			      "pref, t:220:grow, pref, 10, pref, 90:grow, 90:grow, 20");				// rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -245,7 +245,7 @@ public class GuiBoxTimerPanel extends JPanel {
             FormLayout layout = new FormLayout(
                       "pref",           //columna
               "pref, pref, pref, 15, pref, 20, pref");    //rows
-            PanelBuilder builder = new PanelBuilder(jPanelButtonsRecordTimer, layout);
+            PanelBuilder builder = new PanelBuilder(layout,jPanelButtonsRecordTimer);
             CellConstraints cc = new CellConstraints();
 
             builder.add(this.getJButtonNewRecordTimer(),                cc.xy   (1, 1));
@@ -263,7 +263,7 @@ public class GuiBoxTimerPanel extends JPanel {
             FormLayout layout = new FormLayout(
                       "pref, pref",         //columns
               "pref, pref");    //rows
-            PanelBuilder builder = new PanelBuilder(jPanelTimerIcons, layout);
+            PanelBuilder builder = new PanelBuilder(layout,jPanelTimerIcons);
             CellConstraints cc = new CellConstraints();
 
             JLabel l1 = new JLabel(SerIconManager.getInstance().getIcon("localtimer.gif"));
@@ -283,7 +283,7 @@ public class GuiBoxTimerPanel extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "f:pref",	 		//columna
 				      "pref, pref, pref, ");	//rows
-			PanelBuilder builder = new PanelBuilder(jPanelButtonsSystemTimer, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelButtonsSystemTimer);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(this.getJButtonNewSystemtimer(),  				cc.xyw	(1, 1, 1, CellConstraints.FILL, CellConstraints.FILL));
@@ -299,7 +299,7 @@ public class GuiBoxTimerPanel extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "Fill:pref",	 		//columna
 		      "pref, pref ");	//rows
-			PanelBuilder builder = new PanelBuilder(jPanelButtonsGui, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelButtonsGui);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(this.getJButtonDeleteAl(),					cc.xy(1, 1));
@@ -314,7 +314,7 @@ public class GuiBoxTimerPanel extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref",	 		//columns
 				      "pref");	//rows
-			PanelBuilder builder = new PanelBuilder(jPanelDauerTimer, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelDauerTimer);
 			CellConstraints cc = new CellConstraints();
 			
 			int a= 1;
@@ -340,7 +340,7 @@ public class GuiBoxTimerPanel extends JPanel {
 			FormLayout layout = new FormLayout(
 				      "pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref",	 		//columns
 				      "pref");	//rows
-			PanelBuilder builder = new PanelBuilder(jPanelDauerTimer2, layout);
+			PanelBuilder builder = new PanelBuilder( layout,jPanelDauerTimer2);
 			CellConstraints cc = new CellConstraints();
 			
 			int a= 1;

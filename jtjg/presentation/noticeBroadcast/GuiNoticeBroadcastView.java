@@ -88,7 +88,7 @@ public class GuiNoticeBroadcastView extends JDialog {
 			mainPanel = new JPanel();
 			FormLayout layout = new FormLayout("pref:grow, 5, pref", //columns
 					"pref, 10, pref, pref, 60, pref, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(mainPanel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,mainPanel);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 

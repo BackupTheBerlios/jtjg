@@ -128,7 +128,7 @@ public class ControlMainView implements ChangeListener, SysTrayMenuListener, Act
 	}
 	
 	private boolean isPlasticThemeChanged() {
-	    String currentTheme = PlasticLookAndFeel.getMyCurrentTheme().getClass().getName();
+	    String currentTheme = PlasticLookAndFeel.getCurrentTheme().getClass().getName();
 		currentTheme = currentTheme.substring(currentTheme.lastIndexOf(".") + 1);
 		return !currentTheme.equals(ControlMain.getSettings().getMainSettings().getPlasticTheme());    
 	}

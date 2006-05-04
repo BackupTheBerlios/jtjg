@@ -76,7 +76,7 @@ public class GuiSystemTimerEditView extends JFrame{
 			mainPanel = new JPanel();
 			FormLayout layout = new FormLayout("pref, 25, pref:grow", //columns
 					"pref, 10, pref,50"); //rows
-			PanelBuilder builder = new PanelBuilder(mainPanel, layout);
+			PanelBuilder builder = new PanelBuilder(layout,mainPanel);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
@@ -93,7 +93,7 @@ public class GuiSystemTimerEditView extends JFrame{
 	        FormLayout layout = new FormLayout(
 					  "120, 5, 150, 3, 60, 5, 40, 5, 130, 5, pref:grow,pref",  		// columns 
 					  "pref, 5, pref,5,pref,pref"); 			// rows
-	        PanelBuilder builder = new PanelBuilder(panelMainOptions, layout);
+	        PanelBuilder builder = new PanelBuilder(layout,panelMainOptions);
 	        CellConstraints cc = new CellConstraints();
 					
 	        builder.add(new JLabel("Timer:"),		cc.xy	(1, 1));
@@ -119,7 +119,7 @@ public class GuiSystemTimerEditView extends JFrame{
 			FormLayout layout = new FormLayout(
 				      "pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref, 20, pref",	 		//columna
 				      "pref");	//rows
-			PanelBuilder builder = new PanelBuilder(jPanelDauerTimer, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelDauerTimer);
 			CellConstraints cc = new CellConstraints();
 			
 			int a= 1;

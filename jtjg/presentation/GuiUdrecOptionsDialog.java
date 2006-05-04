@@ -86,7 +86,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 			panelMain = new JPanel();
 			FormLayout layout = new FormLayout("pref, 10, pref", //columns
 					"pref, 5, pref, 15, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelMain, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelMain);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 

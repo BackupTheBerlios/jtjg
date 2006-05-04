@@ -89,7 +89,7 @@ public class GuiLogWindow extends JFrame implements ActionListener{
 			jPanelOutput = new JPanel();
 			FormLayout layout = new FormLayout("f:d:grow", //columna
 					"f:d:grow, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(jPanelOutput, layout);
+			PanelBuilder builder = new PanelBuilder(layout,jPanelOutput);
 			CellConstraints cc = new CellConstraints();
 
 			builder.add(this.getJScrollPaneLogArea(), cc.xy(1, 1));

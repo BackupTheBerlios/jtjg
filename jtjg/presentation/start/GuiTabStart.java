@@ -84,7 +84,7 @@ public class GuiTabStart extends JPanel {
 		FormLayout layout = new FormLayout(
 						  "250:grow, 10, 180:grow, 30, 190",  		// columns 
 						  "10, t:130, pref, pref"); 			// rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 		
@@ -103,7 +103,7 @@ public class GuiTabStart extends JPanel {
             panelClient = new JPanel();
 			FormLayout layout = new FormLayout("40, 10, pref:grow", //columns
 					"pref, 5, pref, 5, t:70, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelClient, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelClient);
 			CellConstraints cc = new CellConstraints();
 			
 			builder.add(new JLabel(iconManager.getIcon("penguin.png")),			cc.xy(1, 1));
@@ -124,7 +124,7 @@ public class GuiTabStart extends JPanel {
             panelInfo = new JPanel();
 			FormLayout layout = new FormLayout("40, 10, pref, 5, pref, f:default:grow", //columns
 					"pref, 5, pref, 5, pref, 10, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelInfo, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelInfo);
 			CellConstraints cc = new CellConstraints();
 			
 			builder.add(new JLabel(iconManager.getIcon("info2.png")),			cc.xy(1, 1));
@@ -144,7 +144,7 @@ public class GuiTabStart extends JPanel {
             panelNews = new JPanel();
 			FormLayout layout = new FormLayout("40, 10, 600", //columns
 					"pref, 5, f:120"); //rows
-			PanelBuilder builder = new PanelBuilder(panelNews, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelNews);
 			CellConstraints cc = new CellConstraints();
 			
 			builder.add(new JLabel(iconManager.getIcon("browser.png")),			cc.xy(1, 1));
@@ -164,7 +164,7 @@ public class GuiTabStart extends JPanel {
             panelWarn = new JPanel();
             FormLayout layout = new FormLayout("30, 10, pref", //columns
 				"pref, 5, t:115"); //rows
-			PanelBuilder builder = new PanelBuilder(panelWarn, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelWarn);
 			CellConstraints cc = new CellConstraints();
 			
 			builder.add(new JLabel(iconManager.getIcon("warning.png")),			cc.xy(1, 1));

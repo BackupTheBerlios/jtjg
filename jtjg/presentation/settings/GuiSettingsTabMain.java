@@ -83,7 +83,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 
 		FormLayout layout = new FormLayout("f:pref:grow, 100", // columns
 				"f:pref, 10, pref, 10, pref, 20, pref"); // rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -98,7 +98,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 			panelBoxSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref:grow, 5, pref", //columna
 					"pref:grow, pref:grow, pref:grow, 40:grow"); //rows
-			PanelBuilder builder = new PanelBuilder(panelBoxSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelBoxSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_networkSettings"), cc.xywh(1, 1, 3, 1));
@@ -114,7 +114,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 			panelLayoutSettings = new JPanel();
 			FormLayout layout = new FormLayout("f:300, 10, pref", //columna
 					"pref, pref, pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelLayoutSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelLayoutSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_guiSettings"),			cc.xywh(1, 1, 3, 1));
@@ -133,7 +133,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 		    panelStartOptions = new JPanel();
 			FormLayout layout = new FormLayout(  "pref, 10,  pref, pref:grow", //columna
 					"pref, 5, pref, pref, pref, pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelStartOptions, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelStartOptions);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_startOptions"), 	cc.xyw(1, 1, 3));
@@ -153,7 +153,7 @@ public class GuiSettingsTabMain extends JPanel implements GuiSettingsTab {
 			panelServerRecordSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref, 15, pref, 5, pref", //columns
 					"pref, pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelServerRecordSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelServerRecordSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_serverRecordSettings"), cc.xyw(1, 1, 5));

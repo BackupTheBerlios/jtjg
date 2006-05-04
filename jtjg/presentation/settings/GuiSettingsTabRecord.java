@@ -94,7 +94,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 	public void initialize() {
 		FormLayout layout = new FormLayout("f:pref:grow, 10 f:pref:grow", // columns
 				"pref, 15, pref, 25, pref, 25, pref, 15, t:pref"); // rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -108,7 +108,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelNorth = new JPanel();
 			FormLayout layout = new FormLayout("pref, 25, pref:grow", //columns
 					"pref, 10, t:pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelNorth, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelNorth);
 			CellConstraints cc = new CellConstraints();
 
             builder.add(this.getPanelSaveOptions(), cc.xyw(1, 1, 3));
@@ -123,7 +123,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
             panelSaveOptions = new JPanel();
             FormLayout layout = new FormLayout("pref, 20, pref, 10, pref", //columns
                     "t:pref"); //rows
-            PanelBuilder builder = new PanelBuilder(panelSaveOptions, layout);
+            PanelBuilder builder = new PanelBuilder(layout,panelSaveOptions);
             CellConstraints cc = new CellConstraints();
 
             builder.addLabel(ControlMain.getProperty("label_saveOption"),   cc.xy(1, 1));
@@ -138,7 +138,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelRecordSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref:grow, 5, pref", //columns
 					"pref, pref, pref, pref, pref, pref, 10, pref, pref, pref, 15, pref, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelRecordSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelRecordSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_recordSettings"), cc.xyw(1, 1, 3));
@@ -164,7 +164,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelQuickRecordSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref", //columns
 					"pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelQuickRecordSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelQuickRecordSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_quickRecordSettings"), cc.xywh(1, 1, 1, 1));
@@ -178,7 +178,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelEngineSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref, 5, pref, 5, pref:grow", //columns
 					"pref, pref, pref, pref, pref, 10, pref, 20, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelEngineSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelEngineSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_engine"), cc.xywh(1, 1, 5, 1));
@@ -200,7 +200,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelRecordtimeSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref, 5, pref", //columns
 					"pref, pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelRecordtimeSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelRecordtimeSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_timerSettings"), cc.xyw(1, 1, 3));
@@ -217,7 +217,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 			panelFileNameSettings = new JPanel();
 			FormLayout layout = new FormLayout("pref,10,350:grow,10,pref,5,pref", //columns
 					"pref, pref,pref,pref,pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelFileNameSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelFileNameSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("filep_filepattern"), cc.xyw(1, 1, 7));

@@ -68,7 +68,7 @@ public class GuiSettingsTabMovieGuide extends JPanel implements GuiSettingsTab {
 	public void initialize() {
 		FormLayout layout = new FormLayout("f:pref:grow", // columns
 				"f:pref"); // rows
-		PanelBuilder builder = new PanelBuilder(this, layout);
+		PanelBuilder builder = new PanelBuilder(layout,this);
 		builder.setDefaultDialogBorder();
 		CellConstraints cc = new CellConstraints();
 
@@ -80,7 +80,7 @@ public class GuiSettingsTabMovieGuide extends JPanel implements GuiSettingsTab {
 			panelMovieguideSettings = new JPanel();
 			FormLayout layout = new FormLayout("445,10,pref,pref", //columna
 					"pref, 5, pref,10,pref,5,pref,15,pref,pref,10,pref,5,pref,5,pref,5,pref,pref,pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panelMovieguideSettings, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panelMovieguideSettings);
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_mgchannels"), cc.xywh(1, 1, 1, 1));
