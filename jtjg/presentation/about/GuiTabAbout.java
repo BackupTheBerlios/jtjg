@@ -52,7 +52,7 @@ public class GuiTabAbout extends JPanel {
 	private ImageIcon imageLogo;
 	private JPanel jGrabberInfo;
 	private JLabel labelOther, labelJGrabber;
-	private JTextPane linkHomePage, linkApache, linkProjectX, linkUdrec, linkDom4j, linkForms, linkSystray, labelJGrabber2;
+	private JTextPane linkHomePage, linkApache, linkUdrec, linkDom4j, linkForms, linkSystray, labelJGrabber2;
 	SerHyperlinkAdapter hyperlinkAdapter = new SerHyperlinkAdapter(this);
 	Color background = (Color)UIManager.get("Panel.background");
 

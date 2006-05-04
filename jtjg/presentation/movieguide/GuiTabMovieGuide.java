@@ -80,8 +80,7 @@ public class GuiTabMovieGuide extends JPanel {
 	private JScrollPane jScrollPaneDarsteller = null;
 	private JScrollPane jScrollPaneEpisode = null;
 	private JScrollPane jScrollPaneLand = null;
-	private JScrollPane jScrollPaneAudioVideo;
-	private JScrollPane jPaneTitel= null;
+	private JScrollPane jScrollPaneAudioVideo;	
 	private JScrollPane jScrollPaneGenre= null;
 	
 	private JTextField tfSuche;

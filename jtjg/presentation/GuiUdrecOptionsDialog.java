@@ -105,7 +105,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 			panel1 = new JPanel();
 			FormLayout layout = new FormLayout("pref, 5, pref", //columns
 					"pref, 5, pref, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panel1, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panel1);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
@@ -125,7 +125,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 			panel2 = new JPanel();
 			FormLayout layout = new FormLayout("50", //columns
 					"pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panel2, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panel2);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
@@ -140,7 +140,7 @@ public class GuiUdrecOptionsDialog extends JFrame implements ActionListener{
 			panel3 = new JPanel();
 			FormLayout layout = new FormLayout("pref, 5, 50", //columns
 					"pref, 5, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(panel3, layout);
+			PanelBuilder builder = new PanelBuilder(layout,panel3);
 			builder.setDefaultDialogBorder();
 			CellConstraints cc = new CellConstraints();
 
