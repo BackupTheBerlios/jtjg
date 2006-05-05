@@ -45,7 +45,7 @@ public class GuiLogWindow extends JFrame implements ActionListener{
 	private boolean shouldBeVisible;
 
 	public GuiLogWindow() {
-		super("Log XMediaGrabber");
+		super("Log JtGNG");
 		setContentPane(getJPanelOutput());
 		setSize(600, 150);
 
