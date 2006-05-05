@@ -669,7 +669,6 @@ public class ControlProgramTab extends ControlTab implements Runnable, ActionLis
 	}
 
 	private void actionAddToTimer() {
-		ArrayList list = this.getEpgTableModel().getEpgList();
 		int[] rows = this.getMainView().getTabProgramm().getJTableEPG().getSelectedRows(); //Selektierter EPG´s
 
 		for (int i = 0; i < rows.length; i++) {       //      Schleife über die selektierten epg-Zeilen
@@ -766,14 +765,6 @@ public class ControlProgramTab extends ControlTab implements Runnable, ActionLis
 
 	private JTextArea getJTextAreaEPG() {
 		return this.getMainView().getTabProgramm().getJTextAreaEPG();
-	}
-
-	private JTable getJTableEPG() {
-		return this.getMainView().getTabProgramm().getJTableEPG();
-	}
-
-	private JTable getJTableSender() {
-		return this.getMainView().getTabProgramm().getJTableChannels();
 	}
 
 	/**
