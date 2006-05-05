@@ -37,6 +37,8 @@ import model.BOTimerList;
 
 import java.util.logging.Logger;
 
+import boxConnection.SerBoxGuiDetector;
+
 
 import presentation.timer.GuiNeutrinoRecordTimerTableModel;
 import presentation.timer.GuiNeutrinoSystemTimerTableModel;
@@ -49,15 +51,15 @@ import control.timer.ControlTimerTab;
 /**
  * Schnittstelle zum NeutrinoImage
  */
-public class SerBoxControlNeutrino extends SerBoxControl{
-           
-    public BOTimerList reReadTimerList() throws IOException {
+public class SerBoxControlNeutrino extends SerBoxControl{           
+
+	public BOTimerList reReadTimerList() throws IOException {
         timerList=this.readTimer();
         return timerList;
     }
     
 	public String getName() {
-		return "Neutrino";
+		return SerBoxGuiDetector.NEUTRINO;
 	}
 	
 	public ArrayList getBoxVersion() throws IOException {
@@ -71,14 +73,8 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 		return version;
 	}
 	
-	public String getChanIdOfRunningSender() throws IOException {
-		BufferedReader input = getConnection("/control/zapto");
-		
-		String line;
-		while((line=input.readLine())!=null) {
-			return line;
-		}
-		return line;
+	public String getChanIdOfRunningSender() throws IOException {		
+		return getConnection("/control/zapto").readLine();
 	}
 	
 	public BOSender getRunningSender() throws IOException {
@@ -133,18 +129,18 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 	public ArrayList getBouquetList() throws IOException {
 		ArrayList bouquetList = new ArrayList();
 		String line;
-		
+		StringBuffer namebf = new StringBuffer();
 		BufferedReader input = getConnection("/control/getbouquets");
 			
 		while((line=input.readLine())!=null) {
         	StringTokenizer st = new StringTokenizer(line);
-			String nummer = st.nextToken();
-			String name = new String();
+			String nummer = st.nextToken();			
 			while (st.hasMoreTokens()) {
-				name += st.nextToken();
-				name += " ";
+				namebf = namebf.append(" ");
+		  	 	namebf = namebf.append(st.nextToken());
 			}
-			bouquetList.add(new BOBouquet(nummer, name.trim()));
+			bouquetList.add(new BOBouquet(nummer, namebf.toString().trim()));
+			namebf.setLength(0);
 		}
 		return bouquetList;
 	}
@@ -153,33 +149,24 @@ public class SerBoxControlNeutrino extends SerBoxControl{
         if (senderList==null) {
             senderList = new ArrayList();
             String line;
-        
+            StringBuffer namebf = new StringBuffer();
             BufferedReader in = getConnection("/control/channellist");
             while ((line = in.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(line);
                 String chanId = st.nextToken();
-                
-                String name = new String(); 
                 while (st.hasMoreTokens()) {
-                    name += st.nextToken();
-                    name += " ";
+                	namebf = namebf.append(" ");
+    		  	 	namebf = namebf.append(st.nextToken());
                 }
-                senderList.add(new BOSender("1",chanId, name.trim())); 
+                senderList.add(new BOSender("1",chanId, namebf.toString().trim()));
+    			namebf.setLength(0);
             }    
         }
         return senderList;
 	}
 	
-	public boolean isTvMode() throws IOException{
-        if (isTvMode==null) {
-            BufferedReader input = getConnection("/control/getmode");
-            
-            String line;
-            while((line=input.readLine())!=null) {
-                isTvMode=new Boolean(line.equalsIgnoreCase("tv"));
-            }
-        }
-		return isTvMode.booleanValue();
+	public boolean isTvMode() throws IOException{       
+		return getConnection("/control/getmode").readLine().equalsIgnoreCase("tv");
 	}
 	
 	public ArrayList getSender(BOBouquet bouquet) throws IOException {
@@ -193,26 +180,23 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 		}
 	
 		BufferedReader input = getConnection("/control/getbouquet?bouquet="+bouquet.getBouquetNummer()+"&mode="+mode);
-		
+		StringBuffer namebf = new StringBuffer();
 		while((line=input.readLine())!=null) {
 			StringTokenizer st = new StringTokenizer(line);
 			String nummer = st.nextToken();
 			String channelId = st.nextToken();
-			
-			String name = new String();
-			while (st.hasMoreTokens()) {
-				name += st.nextToken();
-				name += " ";
+			while (st.hasMoreTokens()) {				
+		  	 	namebf = namebf.append(st.nextToken());
+		  	 	namebf = namebf.append(" ");
 			}
-			senderList.add(new BOSender(nummer,channelId, name.trim()));
+			senderList.add(new BOSender(nummer,channelId, namebf.toString().trim()));
+			namebf.setLength(0);
 		}
 		return senderList;
 	}	 
 	
 	public String zapTo(String channelId) throws IOException {
-		//BufferedReader input = SerBoxControl.getConnection("/fb/switch.dbox2?zapto="+channelId);
-		BufferedReader input = getConnection("/control/zapto?"+channelId);
-		
+		BufferedReader input = getConnection("/control/zapto?"+channelId);		
 		String line;
 		while((line=input.readLine())!=null) {
 			return line;
@@ -260,24 +244,21 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 	public ArrayList getEpg(BOSender sender) throws IOException {
 		ArrayList epgList=sender.getEpg();
 		BufferedReader input = getConnection("/control/epg?"+sender.getChanId());
-		String line, eventId, duration, title, valueStart, valueDuration;
-		GregorianCalendar startDate, endDate;
-                
+		String line;                
 		while((line=input.readLine())!=null) {
             BOEpg epgObj = new BOEpg();
 			StringTokenizer st = new StringTokenizer(line);
-			
+			StringBuffer namebf = new StringBuffer();
             epgObj.setEventId(st.nextToken()); //check if epgObj exists
             if (!epgList.contains(epgObj)) {
                 epgObj.setUnformattedStart(st.nextToken());
-                epgObj.setUnformattedDuration(st.nextToken());
-                
-                title = new String();
+                epgObj.setUnformattedDuration(st.nextToken());               
                 while (st.hasMoreTokens()) {
-                    title += st.nextToken();
-                    title += " ";
+                	namebf = namebf.append(st.nextToken());
+    		  	 	namebf = namebf.append(" ");                    
                 }
-                epgObj.setTitle(title.trim());
+                epgObj.setTitle(namebf.toString().trim());
+    			namebf.setLength(0);
 
                 epgObj.setStartDate(SerFormatter.formatUnixDate(epgObj.getUnformattedStart()));
                 epgObj.setDuration(Integer.toString(Integer.parseInt(epgObj.getUnformattedDuration())/60) +" Min");
@@ -293,13 +274,13 @@ public class SerBoxControlNeutrino extends SerBoxControl{
 	public BOEpgDetails getEpgDetail(BOEpg epg) throws IOException {
 		BOEpgDetails epgDetail = new BOEpgDetails();
 		BufferedReader input = getConnection("/control/epg?eventid="+epg.getEventId());
-		
-		String text = new String();
+		StringBuffer text = new StringBuffer();
 		String line;
 		while((line=input.readLine())!=null) {
-			text+=line+" \n";
+			text.append(line);
+			text.append("\n");
 		}
-		epgDetail.setText(text);
+		epgDetail.setText(text.toString());
 		return epgDetail;
 	}
 

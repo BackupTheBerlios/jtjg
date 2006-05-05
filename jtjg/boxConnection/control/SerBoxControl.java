@@ -40,7 +40,7 @@ import control.timer.ControlTimerTab;
 
 public abstract class SerBoxControl {
     
-    protected Boolean isTvMode;
+	protected Boolean isTvMode;
     public boolean newTimerAdded=true;
     public BOTimerList timerList;
     private BOTimer nextLocalRecordTimer;

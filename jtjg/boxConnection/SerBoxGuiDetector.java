@@ -13,8 +13,8 @@ import control.ControlMain;
 public class SerBoxGuiDetector extends Thread {
 	String boxIp;
 	Thread waitThread;
-	private static String NEUTRINO = "Neutrino";
-	private static String ENIGMA   = "enigma";
+	public static String NEUTRINO = "Neutrino";
+	public static String ENIGMA   = "enigma";
 	
 	public SerBoxGuiDetector(String ip, Thread thread) {
 		boxIp = ip;

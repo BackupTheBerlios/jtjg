@@ -42,7 +42,7 @@ import control.timer.ControlTimerTab;
  */
 public class SerBoxControlDefault extends SerBoxControl {
     
-    public String getSptsStatus() {
+	public String getSptsStatus() {
         return new String();
     }
     public boolean setSptsStatus(String status) {

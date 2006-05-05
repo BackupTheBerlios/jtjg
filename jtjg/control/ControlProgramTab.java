@@ -737,8 +737,8 @@ public class ControlProgramTab extends ControlTab implements Runnable, ActionLis
 	 */
 	public Date getDateChooserDate() {
 		if (dateChooserDate == null) {
-			Date date = this.getMainView().getTabProgramm().getJDateChooser().getDate();
-			dateChooserDate = date;
+			Date date = (Date)getMainView().getTabProgramm().getSpinnerDateChooser().getModel().getValue();
+            dateChooserDate = date;
 		}
 		return dateChooserDate;
 	}

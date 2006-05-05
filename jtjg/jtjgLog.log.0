@@ -1,38 +1,28 @@
-04.05.2006 09:23:48 service.SerSettingsHandler readSettings
+05.05.2006 10:53:38 service.SerSettingsHandler readSettings
 INFO: Settings found
-04.05.2006 09:23:48 control.ControlMain log
-INFO: Jack the JGrabber 0.2.9c
-04.05.2006 09:23:48 control.ControlMain log
-INFO: 19.09.2005
-04.05.2006 09:23:48 control.ControlMain log
+05.05.2006 10:53:38 control.ControlMain log
+INFO: JtGNG 0.0.1
+05.05.2006 10:53:38 control.ControlMain log
+INFO: 05.05.2006
+05.05.2006 10:53:38 control.ControlMain log
 INFO: User: ralph
-04.05.2006 09:23:48 control.ControlMain log
+05.05.2006 10:53:38 control.ControlMain log
 INFO: java.version	1.5.0_06
-04.05.2006 09:23:48 control.ControlMain log
+05.05.2006 10:53:38 control.ControlMain log
 INFO: java.vendor	Sun Microsystems Inc.
-04.05.2006 09:23:48 control.ControlMain log
-INFO: java.home	/usr/local/jdk1.5.0_06/jre
-04.05.2006 09:23:48 control.ControlMain log
+05.05.2006 10:53:38 control.ControlMain log
+INFO: java.home	/opt/sun-jdk-1.5.0.06/jre
+05.05.2006 10:53:38 control.ControlMain log
 INFO: java.vm.name	Java HotSpot(TM) Client VM
-04.05.2006 09:23:48 control.ControlMain log
+05.05.2006 10:53:38 control.ControlMain log
 INFO: Suche Box-Image...
-04.05.2006 09:23:48 control.ControlMain log
-INFO: Default-Schnittstelle geladen
-04.05.2006 09:23:48 control.ControlMainView setLookAndFeel
-WARNUNG: com.jgoodies.plaf.plastic.theme.ExperienceBlue
-04.05.2006 09:23:49 boxConnection.SerStreamingServer run
-INFO: Warte auf Eingaben von  Port: 4000
-04.05.2006 09:23:50 boxConnection.control.SerBoxControl getTimerList
-WARNUNG: Fehler beim Lesen der Box-Timer
-04.05.2006 09:23:50 service.SerWebsiteContentLoader getWebsiteContent
-WARNUNG: Server returned HTTP response code: 403 for URL: http://www.jackthegrabber.de:80/jtjg/news.htm
-04.05.2006 09:23:50 control.ControlProgramTab run
-WARNUNG: null
-04.05.2006 09:23:50 control.timer.ControlTimerTab <init>
-WARNUNG: null
-04.05.2006 09:23:52 control.ControlMainView initialize
+05.05.2006 10:53:38 control.ControlMain log
+INFO: Neutrino-Schnittstelle geladen
+05.05.2006 10:53:38 boxConnection.SerStreamingServer run
+INFO: Warte auf Eingaben von 192.168.1.211 Port: 4000
+05.05.2006 10:53:38 boxConnection.control.SerBoxControlNeutrino sendMessage
+INFO: Sende Nachricht zur Box
+05.05.2006 10:53:42 control.ControlMainView initialize
 INFO: Anwendung gestartet
-04.05.2006 09:23:57 service.SerWebsiteContentLoader getWebsiteContent
-WARNUNG: Server returned HTTP response code: 403 for URL: http://www.jackthegrabber.de:80/jtjg/news.htm
-04.05.2006 09:24:09 control.ControlMain log
+05.05.2006 10:53:48 control.ControlMain log
 INFO: Settings saved

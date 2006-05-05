@@ -38,6 +38,9 @@ import javax.swing.JTextArea;
 import javax.swing.ListSelectionModel;
 import javax.swing.SpinnerDateModel;
 import javax.swing.SwingConstants;
+import javax.swing.JSpinner.DateEditor;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -46,7 +49,7 @@ import presentation.GuiTab;
 import presentation.GuiTableSorter;
 import service.SerIconManager;
 import boxConnection.SerStreamingServer;
-import calendar.JDateChooser;
+//import calendar.JDateChooser;
 
 import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
@@ -90,7 +93,7 @@ public class GuiTabProgramm extends GuiTab {
 	private JTable jTableChannels = null;
 	private ControlProgramTab control;
 	private JComboBox JComboBoxBouquets = null;
-	private JDateChooser jDateChooser = null;
+	private JSpinner jSpinnerDateChooser;
 	private JScrollPane jScrollPaneEPGDetail = null;
 	private JScrollPane jScrollPaneAusgabe = null;
 	public GuiTableSorter sorter = null;
@@ -98,7 +101,7 @@ public class GuiTabProgramm extends GuiTab {
 	private SerIconManager iconManager = SerIconManager.getInstance();
 
 	private SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
-
+	private String jSpinnerDateFormat = "EEEEEEEEEE, d MMM yyyy";
 	
 	public GuiTabProgramm(ControlProgramTab control) {
 		this.setControl(control);
@@ -227,7 +230,7 @@ public class GuiTabProgramm extends GuiTab {
 			CellConstraints cc = new CellConstraints();
 
 			builder.addSeparator(ControlMain.getProperty("label_date"), cc.xyw(1, 1, 2));
-			builder.add(this.getJDateChooser(), cc.xyw(1, 2, 2, CellConstraints.FILL, CellConstraints.FILL));
+			builder.add(this.getSpinnerDateChooser(), cc.xyw(1, 2, 2, CellConstraints.FILL, CellConstraints.FILL));
 			builder.addSeparator(ControlMain.getProperty("label_zapping"), cc.xyw(1, 4, 2));
 			builder.add(this.getJComboBoxBouquets(), cc.xyw(1, 5, 2, CellConstraints.FILL, CellConstraints.FILL));
 			builder.add(this.getJScrollPaneChannels(), cc.xyw(1, 6, 2, CellConstraints.FILL, CellConstraints.FILL));
@@ -552,13 +555,14 @@ public class GuiTabProgramm extends GuiTab {
 	 * Achtung modifizierter DateChooser!!! Es wird das Control ControlProgramTab als "Listener" uebergeben wird das Datum geaendert wird
 	 * das aktuelle Datum automatisch ueber setDateChooserDate(Date) gesetzt
 	 */
+	/*
 	public JDateChooser getJDateChooser() {
 		if (jDateChooser == null) {
 			jDateChooser = new JDateChooser("d MMMMM, yyyy", false,control);
 		}
 		return jDateChooser;
 	}
-
+*/
 	/**
 	 * @return Returns the epgTableModel.
 	 */
@@ -656,4 +660,20 @@ public class GuiTabProgramm extends GuiTab {
 		}
 		return jRadioButtonTVMode;
 	}
+	public JSpinner getSpinnerDateChooser(){
+        if(jSpinnerDateChooser == null){
+            jSpinnerDateChooser = new JSpinner(new SpinnerDateModel()) {
+                public void setEnabled(boolean enabled){
+                    super.setEnabled(enabled);
+                }
+            };            
+            jSpinnerDateChooser.setEditor(new DateEditor(jSpinnerDateChooser, jSpinnerDateFormat));
+            jSpinnerDateChooser.addChangeListener(new ChangeListener() {
+                public void stateChanged(ChangeEvent event){                   
+                    getControl().setDateChooserDate((Date)jSpinnerDateChooser.getModel().getValue());
+                }
+            });
+        }
+        return jSpinnerDateChooser;
+    }
 }
