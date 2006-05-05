@@ -65,7 +65,6 @@ public class GuiSettingsTabPlayback extends JPanel implements GuiSettingsTab {
 	private JList jListPlayer;
 	public GuiPlayerListModel playerListModel;
 	private JScrollPane jScrollPanePlayerList;
-	private JPanel panelPlayer;
 	private JButton jButtonAddPlayer = null;
 	private JButton jButtonDeletePlayer = null;
 	
@@ -297,7 +296,7 @@ public class GuiSettingsTabPlayback extends JPanel implements GuiSettingsTab {
 			jListPlayer.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
 				public void valueChanged(ListSelectionEvent e) {
 					if (!e.getValueIsAdjusting()) {
-						int playerIndex = jListPlayer.getSelectedIndex();
+//						int playerIndex = jListPlayer.getSelectedIndex();
 						int optionIndex = jTablePlaybackSettings.getSelectedRow();
 						if (optionIndex>-1) {
 							BOPlaybackOption option = (BOPlaybackOption)ControlMain.getSettingsPlayback()

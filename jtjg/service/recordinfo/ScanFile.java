@@ -233,7 +233,6 @@ public class ScanFile {
 	public void loadPVA(byte[] check, int a) {
 		ByteArrayOutputStream vid = new ByteArrayOutputStream();
 		ByteArrayOutputStream aud = new ByteArrayOutputStream();
-		int number = 0x10000;
 
 		while (a < 550000) {
 			int jump = (255 & check[a + 6]) << 8 | (255 & check[a + 7]);

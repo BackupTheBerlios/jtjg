@@ -54,7 +54,6 @@ public class GuiSettingsTabMovieGuide extends JPanel implements GuiSettingsTab {
 
 	private JCheckBox storeOriginal;	
 	private JList channelList;	
-	private SerIconManager iconManager = SerIconManager.getInstance();
 
 	private JPanel defaultShowPanel;
 	private JPanel downloadPanel;

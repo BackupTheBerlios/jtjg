@@ -29,7 +29,6 @@ import javax.swing.JOptionPane;
 
 import model.BOEpg;
 import model.BONoticeBroadcast;
-import model.BOTimer;
 import control.ControlMain;
 
 
@@ -41,7 +40,6 @@ public class SerNoticeListHandler {
     public static void containsNotice(ArrayList epgList) {
         if (epgList.size()>0) { 
             for (int i=0; i<getNoticeList().size(); i++) {//Schleife ueber die EPG-Liste
-                BOTimer timer;
                 BONoticeBroadcast notice = (BONoticeBroadcast)getNoticeList().get(i);
                 
                 if (notice.isSearchEpg()) { 

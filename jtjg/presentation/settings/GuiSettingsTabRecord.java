@@ -48,12 +48,10 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 	private ControlSettingsTabRecord control;
 	private JPanel panelEngineSettings = null;
 	private JPanel panelRecordSettings = null;	
-	private JPanel panelQuickRecordSettings = null;
 	private JPanel panelRecordtimeSettings = null;
 	private JPanel panelFileNameSettings;
     private JPanel panelSaveOptions;
 	private JPanel panelNorth = null;
-	private JPanel panelSouth = null;
 	private JComboBox jComboBoxStreamType = null;
 	private JTextField jTextFieldUdrecOptions = null;
     private JRadioButton jRadioButtonSaveLocal;
@@ -81,9 +79,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 	private JButton jButtonAfterRecordOptions;
 	
 	private JTextField tfDirPattern;
-	private JTextField tfFilePattern;
-	
-	private SerIconManager iconManager = SerIconManager.getInstance();
+	private JTextField tfFilePattern;	
 
 	public GuiSettingsTabRecord(ControlSettingsTabRecord ctrl) {
 		super();
@@ -158,21 +154,7 @@ public class GuiSettingsTabRecord extends JPanel implements GuiSettingsTab {
 		}
 		return panelRecordSettings;
 	}
-
-	private JPanel getPanelQuickRecordSettings() {
-		if (panelQuickRecordSettings == null) {
-			panelQuickRecordSettings = new JPanel();
-			FormLayout layout = new FormLayout("pref", //columns
-					"pref, pref"); //rows
-			PanelBuilder builder = new PanelBuilder(layout,panelQuickRecordSettings);
-			CellConstraints cc = new CellConstraints();
-
-			builder.addSeparator(ControlMain.getProperty("label_quickRecordSettings"), cc.xywh(1, 1, 1, 1));
-			builder.add(this.getJRadioButtonRecordAllPids(), cc.xy(1, 2));
-		}
-		return panelQuickRecordSettings;
-	}
-
+	
 	private JPanel getPanelEngineSettings() {
 		if (panelEngineSettings == null) {
 			panelEngineSettings = new JPanel();

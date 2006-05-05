@@ -51,7 +51,6 @@ public class GuiBoxTimerPanel extends JPanel {
 	
 	private JPanel jPanelDauerTimer = null;
 	private JPanel jPanelDauerTimer2 = null;
-	private JPanel jPanelTimerListe = null;
 	private JPanel jPanelButtonsRecordTimer = null;
 	private JPanel jPanelButtonsSystemTimer = null;
 	private JPanel jPanelButtonsGui = null;
@@ -66,7 +65,6 @@ public class GuiBoxTimerPanel extends JPanel {
 	private JButton jButtonDeleteAll = null;
 	private JComboBox comboBoxSender = null;
 	private JComboBox comboBoxRepeatRecordTimer = null;
-	private JComboBox comboBoxEventType = null;
 	private JComboBox comboBoxRepeatSystemTimer = null;
 	private ImageIcon imageIcon = null;
 	private JTable jTableRecordTimer = null;

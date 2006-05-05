@@ -96,7 +96,7 @@ public class BOMovieGuide {
     private String inhalt;
   
     private ArrayList sucheList = new ArrayList();
-    private ArrayList aboList = new ArrayList();
+//    private ArrayList aboList = new ArrayList();
     
     /** Creates a new instance of BOMovieGuide */
     

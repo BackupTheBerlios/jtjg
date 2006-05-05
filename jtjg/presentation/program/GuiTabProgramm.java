@@ -32,7 +32,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
-import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.ListSelectionModel;
@@ -59,17 +58,12 @@ import control.ControlMain;
 import control.ControlProgramTab;
 
 public class GuiTabProgramm extends GuiTab {
-
-	private JTabbedPane jControlTab = null;
-	private JPanel tabProgramm = null;
 	private JPanel jPanelButtonsAktionen = null;
 	private JPanel jPanelChannel = null;
 	private JPanel jPanelEpg = null;
 	private JPanel jPanelEpgDetails = null;
 	private JPanel jPanelRecordInfo = null;
-	private JPanel jPanelOutput = null;
 	private JPanel jPanelSouth = null;
-	private JComboBox jComboChooseDate = null;
 	private JTable jTableEPG = null;
 	private JScrollPane jScrollPaneEPG = null;
 	private JButton jButtonQuickRecord = null;
@@ -83,7 +77,6 @@ public class GuiTabProgramm extends GuiTab {
 	private ButtonGroup tvRadioButtonGroup = new ButtonGroup();
 	private JCheckBox cbShutdownAfterRecord;
 	private JTextArea jTextAreaEPG = null;
-	private JTextArea jTextAreaAusgabe = null;
 	private JSpinner jSpinnerRecordStopTime;
 	private JComboBox jComboBoxBoxIP = null;
 	private GuiSenderTableModel senderTableModel;
@@ -95,11 +88,9 @@ public class GuiTabProgramm extends GuiTab {
 	private JComboBox JComboBoxBouquets = null;
 	private JSpinner jSpinnerDateChooser;
 	private JScrollPane jScrollPaneEPGDetail = null;
-	private JScrollPane jScrollPaneAusgabe = null;
 	public GuiTableSorter sorter = null;
 	private SpinnerDateModel dateModelSpinnerStopTime;
 	private SerIconManager iconManager = SerIconManager.getInstance();
-
 	private SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
 	private String jSpinnerDateFormat = "EEEEEEEEEE, d MMM yyyy";
 	
