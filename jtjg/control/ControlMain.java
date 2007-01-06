@@ -77,7 +77,7 @@ public class ControlMain {
 
 	private static String settingsFilename;
 
-	public static String version[] = {"JtGNG 0.0.1", "05.05.2006", "User: " + System.getProperty("user.name")};
+	public static String version[] = {"JtGNG 0.0.1a", "05.05.2006", "User: " + System.getProperty("user.name")};
 
 	public static void main(String args[]) {
 	    startSplash();
